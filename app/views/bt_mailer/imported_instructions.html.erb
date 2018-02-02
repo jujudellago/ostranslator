@@ -1,0 +1,11 @@
+<p><%= t('.greeting', recipient: @resource.first_name,
+  default: "Hello #{@resource.first_name}!") %></p>
+
+<p><%= t('.message',
+  default: "Your email has been imported to our system, you may now define your password.") %></p>
+
+<p><%= link_to t('.action',
+  default: "Set my new password"),
+	imported_users_url(@token,:format=>:html) %>
+</p>
+

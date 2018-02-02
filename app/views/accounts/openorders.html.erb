@@ -1,0 +1,96 @@
+<div class="page-header">
+  <h1>Open orders</h1>
+</div>
+<%= render :partial=>'accounts/account_nav',:locals=>{:account=>@account}%>
+
+<%#= @client.get("market/getopenorders").inspect%>
+
+<%#= @client.credential_get("market/getopenorders").inspect %>
+
+
+
+
+
+
+
+<%
+#fields=["Uuid", "OrderUuid", "Exchange", "OrderType", "Quantity", "QuantityRemaining", "Limit", "CommissionPaid", "Price", "PricePerUnit", "Opened", "Closed", "CancelInitiated", "ImmediateOrCancel", "IsConditional", "Condition", "ConditionTarget"]
+
+
+fields=["Exchange", "OrderType", "Quantity", "QuantityRemaining", "Limit", "Opened", "IsConditional"]
+
+%>
+
+<table class="table table-striped table-bordered data_table">
+<thead>
+  <%fields.each do |h|%>
+    <th><%=h%></th>
+  <%end%>
+  <th></th>
+</thead>
+<tbody>
+
+<%
+
+uuid=nil
+@results=@client.credential_get("market/getopenorders")
+if @results[0]
+  @results[2].each do |order|
+%>
+<tr>
+<%
+uuid=nil
+fields.each do |h|%>
+
+    <% if h=="Opened"%>
+
+      <%
+        dts=order[h]
+        dtt=DateTime.parse(dts)
+        kls=""
+        if dtt < 27.days.ago
+          kls="danger-row"
+        end
+        if dtt > 2.days.ago
+          kls="success-row"
+        end
+        if dtt > 2.hours.ago
+          kls="info-row"
+        end
+
+      %>
+      <td class="<%=kls%>">
+      <%=dts%>
+    <!--<br />  parsed:<%=dtt.to_s(:long)%>-->
+
+    </td>
+    <% elsif h=="OrderUuid"
+      uuid=order[h]
+    %>
+      <td><%=order[h]%>  </td>
+
+   <% elsif h=="Limit"
+      uuid=order[h]
+    %>
+      <td><%=sprintf("%.9f",order[h])%>  </td>
+    <%else%>
+
+
+      <td><%=order[h]%>  </td>
+    <%end%>
+
+<%end%>
+
+
+<td>
+
+  <%= link_to t('.reorder', :default => t("helpers.links.reorder")),
+               user_account_reorder_order_path(user_id: current_user.slug , account_id: @account.id,:uuid=>uuid), :class => 'btn # btn-default btn-xs'
+            %>
+
+            </td>
+</tr>
+<%end%>
+<%end%>
+</tbody>
+</table>
