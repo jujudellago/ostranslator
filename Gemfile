@@ -9,12 +9,14 @@ end
 gem 'pg', '~> 0.21.0'
 # gem 'mysql2', '~> 0.4.9'
 
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.3'
 # Use Puma as the app server
 gem 'puma', '~> 3.10'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0', '>= 5.0.6'
+gem 'coffee-rails'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '~> 3.2'
 # Turbolinks makes navigating your web application faster. Read more:
@@ -26,7 +28,7 @@ gem 'jbuilder', '~> 2.7'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1', '>= 3.1.11'
-gem 'nokogiri', '1.8.0'
+gem 'nokogiri', '1.8.1'
 gem 'nio4r', '2.1.0'
 
 #gem "resque", github: "resque/resque", :branch =>'master' , :require => 'resque/server'
@@ -36,9 +38,14 @@ gem 'whenever', require: false
 
 gem 'websocket-driver', '0.6.5'
 
-
+gem 'redis-rails'
 gem 'bootstrap-sass'
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
+
+
+gem 'lit', :path => "/Users/juju/Dropbox/Brano-Julien-Stuff/custom-gems/lit"
+#gem 'lit', :git => 'git://github.com/jujudellago/lit.git'
+
 # List of countries and their respective states and cities
 gem 'city-state'
 # Authentication
@@ -143,3 +150,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 
 ruby "2.3.1"
+gem 'redis'

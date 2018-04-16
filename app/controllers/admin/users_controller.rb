@@ -32,11 +32,14 @@ module Admin
     def new
       @user = User.new
       authorize @user
+      
+      
     end
 
     # GET /admin/users/1/edit
     def edit
       authorize @user
+
     end
 
     # POST /admin/users
@@ -95,12 +98,12 @@ module Admin
     # Use callbacks to share common setup or constraints between actions.
     def set_user
       @user = User.friendly.find(params[:id])
+      @languages=OsdbLanguage.all
     end
 
     # Strong parameters
     def user_params
-      params.require(:user).permit(:email, :password, :password_confirmation,
-                                   :role, :first_name, :last_name)
+      params.require(:user).permit(:email, :password, :password_confirmation, :role, :first_name, :last_name, osdb_language_ids:[])
     end
   end
 end

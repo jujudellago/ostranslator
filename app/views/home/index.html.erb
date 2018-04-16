@@ -8,21 +8,20 @@
 
 <div class="panel panel-default">
   <div class="panel-body">
-<p>This web app will automatically renew your exisiting orders on Bittrex when they are about to expire</p>
+<p>This app is designed to translate the Opensubtitles website</p>
 </div>
 </div>
 <h3>How does it work ?</h3>
 <ul>
-	<li>Create API key in your <a href="https://bittrex.com/Account/Login?ReturnUrl=%2fManage#sectionApi" rel="external" >bittrex account</a>, the key needs to have the <a href="<%= asset_path("key_infos.png") %>" data-lightbox='gallery'>READ INFO and TRADE LIMIT permissions.</a> </li>
-	<li>Create a <%= link_to "new account", new_user_account_path(current_user)   %>, indicate your api keys and set the account to "enabled"</li>
-	<li>All valid and enabled accounts will have their orders renewed when they are 25 days old</li>
-</ul>
+	<li><%= I18n.t('msg.prof_newpass_notmatch') %></li>
+	<li><%= I18n.t('search.auto_translated') %></li>
+	</ul>
 
-<h3>Support</h3>
-<p>You can show your support by donating litecoin here:</p>
-<pre>MDFdp3CcA8CRTPW59KMzLpc25FbF8HffnU</pre>
-<%=image_tag('ltc-dev.png')%>
+
 	</div>
 	<div class="col-md-6">
 	</div>	
 </div>
+
+
+<%= t('search.available_subtitles') %>

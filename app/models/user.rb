@@ -7,8 +7,10 @@ class User < ApplicationRecord
   # Roles used by the authorization setup
   enum role: { user: 0, admin: 1 }
 
-  has_many :accounts
 
+  has_and_belongs_to_many :osdb_languages
+  
+  
   # **We should NOT validate e-mail uniqueness, e-mail regex or password
   # confirmation here**. Devise's Validatable module is enabled so it already
   # validates those attributes (in the registerable form and the user management

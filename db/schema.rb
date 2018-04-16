@@ -10,37 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180125041138) do
+ActiveRecord::Schema.define(version: 20180202103445) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-  enable_extension "hstore"
-
-  create_table "accounts", force: :cascade do |t|
-    t.string "name"
-    t.string "encrypted_api_key"
-    t.string "encrypted_api_key_iv"
-    t.string "encrypted_api_secret"
-    t.string "encrypted_api_secret_iv"
-    t.integer "user_id"
-    t.boolean "enabled"
-    t.text "comments"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "actions", force: :cascade do |t|
-    t.string "action_type"
-    t.string "status"
-    t.string "market"
-    t.float "quantity"
-    t.text "uuid", default: [], array: true
-    t.hstore "response"
-    t.bigint "account_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["account_id"], name: "index_actions_on_account_id"
-  end
 
   create_table "friendly_id_slugs", id: :serial, force: :cascade do |t|
     t.string "slug", null: false
@@ -52,6 +25,86 @@ ActiveRecord::Schema.define(version: 20180125041138) do
     t.index ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type"
     t.index ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id"
     t.index ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
+  end
+
+  create_table "lit_incomming_localizations", id: :serial, force: :cascade do |t|
+    t.text "translated_value"
+    t.integer "locale_id"
+    t.integer "localization_key_id"
+    t.integer "localization_id"
+    t.string "locale_str"
+    t.string "localization_key_str"
+    t.integer "source_id"
+    t.integer "incomming_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.index ["incomming_id"], name: "index_lit_incomming_localizations_on_incomming_id"
+    t.index ["locale_id"], name: "index_lit_incomming_localizations_on_locale_id"
+    t.index ["localization_id"], name: "index_lit_incomming_localizations_on_localization_id"
+    t.index ["localization_key_id"], name: "index_lit_incomming_localizations_on_localization_key_id"
+    t.index ["source_id"], name: "index_lit_incomming_localizations_on_source_id"
+  end
+
+  create_table "lit_locales", id: :serial, force: :cascade do |t|
+    t.string "locale"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.boolean "is_hidden", default: false
+  end
+
+  create_table "lit_localization_keys", id: :serial, force: :cascade do |t|
+    t.string "localization_key"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.boolean "is_completed", default: false
+    t.boolean "is_starred", default: false
+    t.index ["localization_key"], name: "index_lit_localization_keys_on_localization_key", unique: true
+  end
+
+  create_table "lit_localization_versions", id: :serial, force: :cascade do |t|
+    t.text "translated_value"
+    t.integer "localization_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.index ["localization_id"], name: "index_lit_localization_versions_on_localization_id"
+  end
+
+  create_table "lit_localizations", id: :serial, force: :cascade do |t|
+    t.integer "locale_id"
+    t.integer "localization_key_id"
+    t.text "default_value"
+    t.text "translated_value"
+    t.boolean "is_changed", default: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.index ["locale_id"], name: "index_lit_localizations_on_locale_id"
+    t.index ["localization_key_id"], name: "index_lit_localizations_on_localization_key_id"
+  end
+
+  create_table "lit_sources", id: :serial, force: :cascade do |t|
+    t.string "identifier"
+    t.string "url"
+    t.string "api_key"
+    t.datetime "last_updated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.boolean "sync_complete"
+  end
+
+  create_table "osdb_languages", force: :cascade do |t|
+    t.string "id_sub_language"
+    t.string "iso_639"
+    t.string "language_code"
+    t.string "language_name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "osdb_languages_users", id: false, force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "osdb_language_id"
+    t.index ["osdb_language_id"], name: "index_osdb_languages_users_on_osdb_language_id"
+    t.index ["user_id"], name: "index_osdb_languages_users_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

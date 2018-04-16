@@ -176,6 +176,10 @@ $navbar-default-link-disabled-bg:          $brand-light;
 .nav > li > a {
   font-weight: 500;
 }
+.nav i.fa{
+	color:#fff;
+	font-size:22px;
+}
 
 // Prevent navbar from covering other elements
 body {

@@ -17,9 +17,10 @@
 // rails-ujs, mainly because it makes it easier to override $.rails.allowAction
 // to replace JavaScript confirmation dialogs with application-specific modals.
 //= require jquery_ujs
-//= require turbolinks
+//# require turbolinks
 //= require bootstrap-sprockets
 //= require jquery.magnific-popup.min
 //= require select2
 //= require sweetalert2/dist/sweetalert2
+//= require lit/application
 //= require_tree .

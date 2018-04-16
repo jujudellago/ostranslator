@@ -15,4 +15,13 @@
 
   <dt><%= t('.full_name') %></dt>
   <dd><%= @user.full_name %></dd>
+
+  <dt>Languages</dt>
+  <dd><% @user.osdb_languages.each do |l| %>
+	<%= l.language_name %><br />
+	
+	<%- end -%>
+	</dd>
+
+
 </dl>

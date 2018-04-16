@@ -19,7 +19,8 @@ module Ostranslator
 
     # Locale config
     config.i18n.default_locale = :en
-    config.i18n.available_locales = [:en]
+    config.i18n.available_locales = [:en, :ar, :gl, :bg, :cs, :no, :ro, :sk, :de, :uk, :nl, :ko, :fa, :da, :fi, :fr, :vi, :he, :th, :tl, :el, :tr, :hu, :oc, :id, :uz, :it, :ca, :pl, :'pt-PT', :'pt-BR', :ru, :es, :is, :sv, :ab, :ja, :hr, :'zh-CN', :sr, :ms, :et, :km, :ka, :mk, :sq, :sl, :'zh-TW', :si, :ur, :eu, :bn, :az, :hi, :eo, :br, :at]
+    config.i18n.fallbacks =[:en]
     config.i18n.load_path +=
       Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}')]
 

@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
 
-  root to: 'home#index'
+  mount Lit::Engine => '/lit'
+  scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/  do
+  
+    root to: 'home#index'
+  end
 
   devise_for :users, controllers: {
     # Override the following Devise controllers with our custom versions
@@ -11,24 +15,7 @@ Rails.application.routes.draw do
   devise_scope :user  do
     get "/imported/:reset_password_token" => "users/passwords#imported", :as => :imported_users, :action => :imported
   end
-  resources :users do
-    resources :accounts do
-      get :openorders
-      #get :buylimit
-      #get :selllimit
-      get :orderhistory
-      get :balance
-      get :actions
-
-      #get '/buylimit/:market/:quantity/:rate', action: :buylimit, as: :buylimit_order
-      #get '/selllimit/:market/:quantity/:rate', action: :selllimit, as: :selllimit_order
-
-      get '/buylimit/:market', action: :buylimit, as: :buylimit_order
-      get '/selllimit/:market', action: :selllimit, as: :selllimit_order
-
-      get '/reorder/:uuid', action: :reorder, as: :reorder_order
-    end
-  end
+  resources :users 
 
 
 

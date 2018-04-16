@@ -13,7 +13,7 @@ class ContactForm < MailForm::Base
   # in ActionMailer accepts.
   def headers
     {
-      subject: 'Bittrex Zen - Message sent via contact form',
+      subject: 'OpenSubtitles Translator - Message sent via contact form',
       to: 'replace@me.com',
       from: %("#{name}" <#{email}>)
     }

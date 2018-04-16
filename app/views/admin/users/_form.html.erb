@@ -45,6 +45,24 @@
     </div>
   </div>
 
+		<fieldset>
+			<legend>Associated languages</legend>
+		<div class="row">
+		<%- @languages.in_groups_of((@languages.size/4).to_i, false) do |group|-%>
+		<div class="col-md-3">
+			<%- group.each do |l| -%>
+			<span class="checkbox">
+			<label class="check_boxes optional control-label" for="user_osdb_languages_<%= l.language_code %>">
+				<input class="check_boxes optional" type="checkbox" value="<%= l.id %>" name="user[osdb_language_ids][]" id="user_osdb_languages_<%= l.language_code %>" <%- if @user.osdb_languages && @user.osdb_languages.include?(l) -%>checked="checked"<%- end -%> />
+				<%= l.language_name %> <i class="flag <%= l.language_code %>"/></i>
+				</label>
+				</span>
+			<%- end -%>
+		</div>
+		<%- end -%>
+		</div>
+		</fieldset>
+
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
       <%= f.submit class: "btn btn-primary" %>
