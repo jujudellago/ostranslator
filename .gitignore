@@ -32,6 +32,11 @@ coverage/
 /config/application.yml
 
 config/database.yml
+config/locales/lit.yml
+config/locales/new.yml
+config/initializers/i18n.rb
+config/initializers/lit.rb
+
 
 *.rbc
 capybara-*.html

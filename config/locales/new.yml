@@ -1,0 +1,61 @@
+---
+en:
+  global:
+    form_select: Select
+    new_to_translate: Hello world, you need to be translated
+  menu:
+    upload: Upload
+    show_me_all_languages: Show me all languages
+    other_site_languages: Other site languages
+    choose_site_languages: Choose the site language 
+  request:
+    my_requests: My requests
+  vajax:
+    score: Score
+  banner:
+    new_subtitles: New subtitles for movies
+  html:
+    title: Subtitles - download movie and TV Series subtitles from the biggest open subtitles database
+  profile:
+    profile_for_user: Profile for user
+  upload:
+    upload_subtitles: Upload subtitles
+  search:
+    advanced_search: Advanced search
+    latest_series: Latest TV Shows
+  imdblook:
+    imdblookup: IMDB ID lookup
+  subdetail:
+    movie_rating: Movie Rating
+    your_file_is_ready: Your file is ready    
+    max_quota_reached: You have downloaded your allowed %{requests} subtitles for 24h.
+    quota_renew: Your quota will be renewed in %{time}     
+  report:
+    report_wrong_data: Report wrong data for subtitles
+  editsub:
+    correct_data: Correct data for subtitles
+  stats:
+    files: files
+    tv_movies: TV Movies
+    videos: Videos
+    video_games: Video Games     
+    top_rated_series: Top rated TV Shows   
+    on_air_series: TV Shows on air
+    popular_series: Popular TV Shows
+  languages:
+    Albanian: Albanian
+  hint:
+    search_1: You have to register to access <b>multi-search</b>
+  msg:
+    sub_disabled: These subtitles were <b>disabled</b>, you should not use them
+  tpl:
+    email_body_footer: "  --   Sincerely,     OpenSubtitles.org team, %{server}"
+  player:
+    ad_msg: Watch movies with subtitles using <a href='/player'>Open Subtitles MKV
+      Player</a>. It is free and clean, works under Windows.
+  comment:
+    reply: Reply
+  java:
+    BLogin: Log-In
+  ad:
+    advertise_with_us: Advertise your product or brand here   contact %{url} today
