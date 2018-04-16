@@ -21,7 +21,7 @@
 # role :web, %w{user1@primary.com user2@additional.com}, other_property: :other_value
 # role :db,  %w{deploy@example.com}
 
-set :deploy_to, "/data/www/ostranslator"
+set :deploy_to, "/data/www/osdb_translator"
 set :deploy_via, :copy
 
 
@@ -55,7 +55,7 @@ set :puma_user, fetch(:user)
 set :puma_rackup, -> { File.join(current_path, 'config.ru') }
 set :puma_role, :app
 set :puma_env, fetch(:rack_env, fetch(:rails_env, 'french'))
-set :puma_bind,       "unix:///data/www/ostranslator/shared/puma.sock"
+set :puma_bind,       "unix:///data/www/osdb_translator/shared/puma.sock"
 set :puma_state,      "#{shared_path}/tmp/pids/puma.state"
 set :puma_pid,        "#{shared_path}/tmp/pids/puma.pid"
 set :puma_access_log, "#{release_path}/log/puma.error.log"
@@ -171,19 +171,19 @@ end
 #     system cmd
 #    
 #    
-#     public_cache_path = File.join(release_path, "public/cache/www.ostranslator")
+#     public_cache_path = File.join(release_path, "public/cache/www.btzen")
 #     cmd = " mkdir  #{public_cache_path}" 
 #     system cmd
 #    
-#     pro_public_cache_path = File.join(release_path, "public/cache/www.ostranslator")
+#     pro_public_cache_path = File.join(release_path, "public/cache/www.btzen")
 #     cmd = " mkdir  #{pro_public_cache_path}" 
 #     system cmd
 #    
 #    public_500_html = File.join(public_cache_path, "500.html")
-#    execute :curl, "-k", "http://www.ostranslator/500", "> #{public_500_html}"
+#    execute :curl, "-k", "http://www.btzen/500", "> #{public_500_html}"
 #    
 #    public_404_html = File.join(public_cache_path, "404.html")
-#    execute :curl, "-k", "http://www.ostranslator/404", "> #{public_404_html}"
+#    execute :curl, "-k", "http://www.btzen/404", "> #{public_404_html}"
 #  
 #    pro_500_html = File.join(pro_public_cache_path, "500.html")
 #    execute :curl, "-k", "http://www.vostfr.pro/500", "> #{pro_500_html}"
