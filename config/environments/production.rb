@@ -4,7 +4,7 @@ Rails.application.configure do
   config.middleware.use ExceptionNotification::Rack,
                         email: {
                           email_prefix: '[EXCEPTION] ',
-                          sender_address: %[BtZen" <noreply@2pu.net>],
+                          sender_address: %[Opensubtitles" <noreply@opensubtitles.org>],
                           exception_recipients: %w[julien.ramel@gmail.com]
                         }
 
