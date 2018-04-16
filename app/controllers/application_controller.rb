@@ -27,7 +27,7 @@ class ApplicationController < ActionController::Base
   rescue_from ActiveRecord::DeleteRestrictionError,
               with: :show_delete_restriction_error
 
-#  helper Lit::FrontendHelper
+  helper Lit::FrontendHelper
 
   layout :set_layout
 

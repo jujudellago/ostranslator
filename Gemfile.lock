@@ -1,4 +1,13 @@
 GIT
+  remote: git://github.com/jujudellago/lit.git
+  revision: 13169db0aa4ef0cdb7380b8be4931e5592acc94a
+  specs:
+    lit (0.3.3)
+      i18n (~> 0.7)
+      jquery-rails
+      rails (>= 4.2.0)
+
+GIT
   remote: git://github.com/seyhunak/twitter-bootstrap-rails.git
   revision: c236286b7d6e73affa1597f62fd51e9dbd268f1c
   specs:
@@ -16,14 +25,6 @@ GIT
       capistrano (~> 3.7)
       capistrano-bundler
       puma (~> 3.4)
-
-PATH
-  remote: /Users/juju/Dropbox/Brano-Julien-Stuff/custom-gems/lit_upgrade
-  specs:
-    lit (0.3.3)
-      i18n (~> 0.7)
-      jquery-rails
-      rails (>= 4.2.0)
 
 GEM
   remote: https://rubygems.org/
@@ -222,7 +223,7 @@ GEM
       net-ssh (>= 2.6.5)
     net-ssh (4.2.0)
     nio4r (2.1.0)
-    nokogiri (1.8.1)
+    nokogiri (1.8.2)
       mini_portile2 (~> 2.3.0)
     orm_adapter (0.5.0)
     parallel (1.12.0)
@@ -444,7 +445,7 @@ DEPENDENCIES
   mail_form
   memory_profiler
   nio4r (= 2.1.0)
-  nokogiri (= 1.8.1)
+  nokogiri (= 1.8.2)
   pg (~> 0.21.0)
   pry-doc
   pry-rails
