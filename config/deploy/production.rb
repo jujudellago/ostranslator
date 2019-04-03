@@ -21,6 +21,8 @@
 # role :web, %w{user1@primary.com user2@additional.com}, other_property: :other_value
 # role :db,  %w{deploy@example.com}
 
+#server '172.20.120.2', roles: %w(app web), user: 'deploy'
+
 set :deploy_to, "/data/www/osdb_translator"
 set :deploy_via, :copy
 
