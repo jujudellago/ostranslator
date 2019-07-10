@@ -15,7 +15,7 @@ gem 'pg', '~> 0.21.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
 # Use Puma as the app server
-gem 'puma', '~> 3.10'
+gem 'puma', '~> 4'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0', '>= 5.0.6'
 gem 'coffee-rails'
@@ -151,5 +151,5 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 
-ruby "2.3.1"
+ruby "2.4.0"
 gem 'redis'

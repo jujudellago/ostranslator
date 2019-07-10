@@ -6606,9 +6606,47 @@ ca:
     write_new_comment: Escriviu un nou comentari
     write_reply_to: Escriviu una resposta a
 cs:
+  actions:
+    back: Back
+    column_name: Actions
+    delete: Delete
+    discard: Discard
+    draft: Draft
+    edit: Edit
+    new: New
+    publish: Publish
+    ready: Ready to publish
+    show: Show Details
   activerecord:
     attributes:
+      active_record/base:
+        <span class="lit-key-generic" data-key="admin:
+          users:
+            index:
+              email" data-locale="fr">E-mail</span>:
+                one: 
+              full_name" data-locale="fr">Full Name</span>:
+                one: 
+              role" data-locale="fr">Role</span>:
+                one: 
+      application_record:
+        <span class="lit-key-generic" data-key="admin:
+          users:
+            index:
+              email" data-locale="fr">E-mail</span>:
+                one: 
+              full_name" data-locale="fr">Full Name</span>:
+                one: 
+              role" data-locale="fr">Role</span>:
+                one: 
+      lit/localization:
+        translated_value: 
       user:
+        <span class="lit-key-generic" data-key="admin:
+          users:
+            index:
+              email" data-locale="fr">E-mail</span>:
+                one: 
         confirmation_sent_at: Potvrzení zasláno
         confirmation_token: Potvrzovací token
         confirmed_at: Potvrzeno
@@ -7359,7 +7397,7 @@ cs:
     password: Heslo
     password_again: Heslo [potvrdit]
     prefered_subtitles: Preferované jazyky titulků
-    privacy_policy: Souhlasím s podmínkami použití
+    privacy_policy: Súhlasím s <a href='%{url}'>Podmienkami používania</a>
     private: soukromý (neviditelný pro všechny)
     profile: Profil
     profile_for_user: Profil uživatele
@@ -8967,26 +9005,37 @@ de:
   activerecord:
     attributes:
       active_record/base:
-        E-mail:
-          one: 
-        Full Name:
-          one: 
-        Role:
-          one: 
+        <span class="lit-key-generic" data-key="admin:
+          users:
+            index:
+              email" data-locale="fr">E-mail</span>:
+                one: 
+              full_name" data-locale="fr">Full Name</span>:
+                one: 
+              role" data-locale="fr">Role</span>:
+                one: 
       application_record:
-        E-mail:
-          one: 
-        Full Name:
-          one: 
-        Role:
-          one: 
+        <span class="lit-key-generic" data-key="admin:
+          users:
+            index:
+              email" data-locale="fr">E-mail</span>:
+                one: 
+              full_name" data-locale="fr">Full Name</span>:
+                one: 
+              role" data-locale="fr">Role</span>:
+                one: 
+      lit/localization:
+        translated_value: 
       user:
-        E-mail:
-          one: 
-        Full Name:
-          one: 
-        Role:
-          one: 
+        <span class="lit-key-generic" data-key="admin:
+          users:
+            index:
+              email" data-locale="fr">E-mail</span>:
+                one: 
+              full_name" data-locale="fr">Full Name</span>:
+                one: 
+              role" data-locale="fr">Role</span>:
+                one: 
         confirmation_sent_at: Bestätigung gesendet am
         confirmation_token: Bestätigungs-Token
         confirmed_at: Bestätigt am
@@ -8998,7 +9047,6 @@ de:
         encrypted_password: Verschlüsseltes Passwort
         failed_attempts: Fehlversuche
         first_name: 
-        last_name: 
         last_sign_in_at: Letzte Anmeldung am
         last_sign_in_ip: IP der letzten Anmeldung
         locked_at: Gesperrt am
@@ -9055,6 +9103,19 @@ de:
         breadcrumb: Diff
         done: Diff
         link: Diff  %{model_label}
+    users:
+      success: 
+  attributes:
+    <span class="lit-key-generic" data-key="admin:
+      users:
+        index:
+          email" data-locale="fr">E-mail</span>: 
+          full_name" data-locale="fr">Full Name</span>: 
+          role" data-locale="fr">Role</span>: 
+    first_name: 
+    last_name: 
+    role: 
+    translated_value: 
   banner:
     new_subtitles: Neue Untertitel auf dem Server
   comment:
@@ -9117,37 +9178,57 @@ de:
       about_x_hours:
         one: etwa eine Stunde
         other: etwa %{count} Stunden
+        two: حوالي ساعتان
+        zero: حوالي صفر ساعات
       about_x_months:
         one: etwa ein Monat
         other: etwa %{count} Monate
+        two: حوالي شهران
+        zero: حوالي صفر أشهر
       about_x_years:
         one: etwa ein Jahr
         other: etwa %{count} Jahre
+        two: حوالي سنتان
+        zero: حوالي صفر سنوات
       almost_x_years:
         one: fast ein Jahr
         other: fast %{count} Jahre
+        two: ما يقرب من سنتين
+        zero: ما يقرب من صفر سنوات
       half_a_minute: eine halbe Minute
       less_than_x_minutes:
         one: weniger als eine Minute
         other: weniger als %{count} Minuten
+        two: أقل من دقيقتان
       less_than_x_seconds:
         one: weniger als eine Sekunde
         other: weniger als %{count} Sekunden
+        two: أقل من ثانيتان
       over_x_years:
         one: mehr als ein Jahr
         other: mehr als %{count} Jahre
+        two: أكثر من سنتين
+        zero: أكثر من صفر سنوات
       x_days:
         one: ein Tag
         other: "%{count} Tage"
+        two: يومان
+        zero: صفر أيام
       x_minutes:
         one: eine Minute
         other: "%{count} Minuten"
+        two: دقيقتان
+        zero: صفر دقائق
       x_months:
         one: ein Monat
         other: "%{count} Monate"
+        two: شهران
+        zero: صفر أشهر
       x_seconds:
         one: eine Sekunde
         other: "%{count} Sekunden"
+        two: ثانيتان
+        zero: صفر ثواني
     prompts:
       day: Tag
       hour: Stunden
@@ -9176,6 +9257,8 @@ de:
       unauthenticated: Sie müssen sich anmelden oder registrieren, bevor Sie fortfahren
         können.
       unconfirmed: Sie müssen Ihren Account bestätigen, bevor Sie fortfahren können.
+      user:
+        not_found_in_database: "%{authentication_keys} oder Passwort ungültig."
     mailer:
       confirmation_instructions:
         action: Mein Konto bestätigen
@@ -9261,6 +9344,8 @@ de:
         sign_in: Anmelden
       signed_in: Erfolgreich angemeldet.
       signed_out: Erfolgreich abgemeldet.
+      user:
+        signed_in: Signed in successfully.
     shared:
       links:
         back: Zurück
@@ -9310,8 +9395,16 @@ de:
       not_saved:
         one: "%{resource} konnte aufgrund eines Fehlers nicht gespeichert werden:"
         other: "%{count} Fehler verhinderten das Speichern von %{resource}:"
+        two: "%{count} أخطاء منع %{resource} هذا من أن يتم حفظه:"
+        zero: "%{count} أخطاء منع %{resource} هذا من أن يتم حفظه:"
       odd: muss ungerade sein
-      other_than: darf nicht gleich %{count} sein
+      other_than:
+        few: الطول يجب ألاّ يكون %{count} أحرف
+        many: الطول يجب ألاّ يكون %{count} حرفاً
+        one: الطول يجب ألاّ يكون حرفاً وحداً
+        other: الطول يجب ألاّ يكون %{count} حرفاً
+        two: الطول يجب ألاّ يكون حرفان
+        zero: الطول يجب ألاّ يكون صفر أحرف
       present: darf nicht ausgefüllt werden
       record_invalid: 'Gültigkeitsprüfung ist fehlgeschlagen: %{errors}'
       restrict_dependent_destroy:
@@ -9322,17 +9415,25 @@ de:
       too_long:
         one: ist zu lang (mehr als 1 Zeichen)
         other: ist zu lang (mehr als %{count} Zeichen)
+        two: أطول من اللّازم (الحد الأقصى هو حرفان)
+        zero: أطول من اللّازم (الحد الأقصى هو ولا حرف)
       too_short:
         one: ist zu kurz (weniger als 1 Zeichen)
         other: ist zu kurz (weniger als %{count} Zeichen)
+        two: أقصر من اللّازم (الحد الأدنى هو حرفان)
+        zero: أقصر من اللّازم (الحد الأدنى هو ولا حرف)
       wrong_length:
         one: hat die falsche Länge (muss genau 1 Zeichen haben)
         other: hat die falsche Länge (muss genau %{count} Zeichen haben)
+        two: الطول غير مطابق للحد المطلوب (يجب أن يكون حرفان)
+        zero: الطول غير مطابق للحد المطلوب (يجب أن يكون ولا حرف)
     template:
       body: 'Bitte überprüfen Sie die folgenden Felder:'
       header:
         one: 'Konnte %{model} nicht speichern: ein Fehler.'
         other: 'Konnte %{model} nicht speichern: %{count} Fehler.'
+        two: 'ليس بالامكان حفظ %{model}:  خطئان.'
+        zero: 'ليس بالامكان حفظ %{model}: لايوجد أخطاء.'
   faker:
     address:
       building_number:
@@ -9613,6 +9714,11 @@ de:
       postcode:
       - "#####"
       - "#####"
+      postcode_by_state:
+        GO: 72###-###
+        PR: 80###-###
+        RS: 90###-###
+        TO: 77###-###
       secondary_address:
       - 'Apt. ###'
       - 'Zimmer ###'
@@ -16610,9 +16716,11 @@ de:
     downloaded_from: Heruntergeladen von %{value}
     episode: Episode
     form_select: auswählen
+    full_home: Full home page
     log_in: anmelden
     movie: Movie
     new_to_translate: Hello world, you need to be translated
+    new_to_translate_again: Hello world, please translate me
     new_window: Link wird in neuem Fenster geöffnet
     no_access: Zugriff verweigert - bitte anmelden oder registrieren
     no_results: Keine Treffer gefunden
@@ -16633,6 +16741,22 @@ de:
     tvshow: Tv Show
   header: Localization keys
   helpers:
+    label:
+      lit/localization:
+        translated_value: 
+      localization:
+        translated_value: 
+      user:
+        email: 
+        first_name: 
+        last_name: 
+        password: 
+        password_confirmation: 
+        remember_me: 
+        role: 
+    page_entries_info:
+      one_page:
+        display_entries: 
     select:
       prompt: Bitte wählen
     submit:
@@ -16682,6 +16806,9 @@ de:
     keywords: Untertitel, Film, divx, download, Übersetzung, übersetzt, Serie, Serien,
       xvid, avi, video, dvd, cd, tv, Kapitel, subs, file, hdtv, blu-ray
     title: Untertitel aus der größten offenen DivX-Untertiteldatenbank herunterladen
+  i18n:
+    transliterate:
+      rule: 
   imdblook:
     imdbid: IMDB-ID
     imdblookup: IMDB-ID nachschlagen
@@ -16794,6 +16921,7 @@ de:
       updated_at_desc: Updated at desc
   menu:
     blog: Blog
+    choose_site_languages: Choose the site language
     contact: Kontakt
     developers: Programmierer
     disclaimer: Haftungsausschluss
@@ -16806,13 +16934,16 @@ de:
     logged_in_as: angemeldet als
     logout: abmelden
     multisearch: Multisuche
+    other_site_languages: Other site languages
     player: Player
+    popular_site_languages: Popular site languages
     prepare: wird verarbeitet
     profile: Profil
     register: registrieren
     request: Anfrage
     search: suchen
     select_language: Untertitelsprache
+    show_me_all_languages: Show me all languages
     slogan: Suche in %{total} Untertiteln
     software: Software
     statistics: Statistik
@@ -17004,6 +17135,8 @@ de:
           byte:
             one: Byte
             other: Bytes
+            two: Bytes
+            zero: Bytes
           gb: GB
           kb: KB
           mb: MB
@@ -17126,6 +17259,28 @@ de:
     any: beliebige
     asc: aufsteigend
     attribute: Attribut
+    attributes:
+      active_record/base:
+        <span class="lit-key-generic" data-key="admin:
+          users:
+            index:
+              email" data-locale="fr">E-mail</span>: 
+              full_name" data-locale="fr">Full Name</span>: 
+              role" data-locale="fr">Role</span>: 
+      application_record:
+        <span class="lit-key-generic" data-key="admin:
+          users:
+            index:
+              email" data-locale="fr">E-mail</span>: 
+              full_name" data-locale="fr">Full Name</span>: 
+              role" data-locale="fr">Role</span>: 
+      user:
+        <span class="lit-key-generic" data-key="admin:
+          users:
+            index:
+              email" data-locale="fr">E-mail</span>: 
+              full_name" data-locale="fr">Full Name</span>: 
+              role" data-locale="fr">Role</span>: 
     combinator: Kombinator
     condition: Bedingung
     desc: absteigend
@@ -17326,6 +17481,8 @@ de:
       funktionieren</li>   <li>- wir hoffen auf eure <b>Featurewünsche</b> (Site wird
       laufend weiterentwickelt)</li>   </ul>   </div>   </div>"
   stats:
+    airing_this_week: TV shows airing this week
+    airing_today_series: TV shows airing today
     db_queries: q
     downloaded_subtitles: Untertitel-Downloads der letzten %{value} Tage
     files: Dateien
@@ -17357,6 +17514,8 @@ de:
     top_rated_subtitles: Höchstbewertete Untertitel der letzten %{value} Tage
     top_requested_subs: Am meisten angefragte Untertitel der letzten %{value} Tage
     top_uploaders: Top-Uploader der letzten %{value} Monate
+    trending_movies: Trending movies
+    trending_tvshows: Trending TV Shows
     uploaded_subtitles: Untertitel-Uploads der letzten %{value} Tage
     users: Benutzer
     visitors_online: Online
@@ -17364,6 +17523,7 @@ de:
   subdetail:
     add_to_favourites: Zu den Favoriten hinzufügen
     aka: Alternativtitel
+    all: All
     all_subs_for_movie: Alle Untertitel für diesen Film
     all_subs_from_user: Alle Untertitel von diesem Benutzer
     all_subs_in_lang: Alle Untertitel für diesen Film in dieser Sprache
@@ -17373,6 +17533,7 @@ de:
     cast: Besetzung
     cds_info: Dateiinformationen
     country: Land
+    creators: Creators
     details: Details
     directed_by: Regie
     disable: deaktivieren
@@ -17403,13 +17564,18 @@ de:
     link_web: Web
     links: Interessante Links
     look_up_findhash: Bei Findhash.com nachschlagen
+    max_quota_reached: You have downloaded your allowed %{requests} subtitles for
+      24h.
     movie_details: Filmdetails
     movie_filename: Filmdateiname
     movie_filenames: Filmdateinamen
     movie_rating: Filmbewertung
     movie_size: Filmgröße
     movie_time: Filmdauer
+    original_title: Original title
     points: Punkten
+    production_companies: Production companies
+    quota_renew: Your quota will be renewed in %{time}
     rate_subs_with: Untertitel bewerten mit
     release_name: Release-Name
     remove_from_favourites: Von den Favoriten entfernen
@@ -17436,12 +17602,14 @@ de:
     uploader_comment: Uploader-Kommentar
     use_download_manager: Die Nutzer können entscheiden, ob sie den OS Download Manager
       nutzen möchten
+    view_all_transcript: View all transcript
     vote_for_subtitles: Untertitel bewerten
     vote_for_subtitles2: Bewerte die <b>Qualität</b> der Untertitel
     vote_sub_title: Bewerte die QUALITÄT der Untertitel mit %{wert} Punkten (%{wert2})
     votes: Stimmen
     watch_online: "%{value} online ansehen"
     writer_credits: Drehbuch/Buchvorlage
+    your_file_is_ready: Your file is ready
     your_link_here: Dein Link hier
   support:
     array:
@@ -17454,6 +17622,7 @@ de:
       default: "%A, %d. %B %Y, %H:%M Uhr"
       long: "%A, %d. %B %Y, %H:%M Uhr"
       short: "%d. %B, %H:%M Uhr"
+      us: "%m/%d/%Y %I:%M %p"
     pm: nachmittags
   tpl:
     acc_confirm_body: 'Hallo %{username},      wir haben eine Registrierungsanforderung
@@ -17519,6 +17688,12 @@ de:
       Untertitel entsprechen den Suchkriterien:      %{search_results}      Um keine
       Mails mit Ergebnissen für diese Kriterien mehr zu bekommen, geh auf diesen Link:   %{url_stop}   %{footer}'
     search_results_subj: OpenSubtitles.org Suchergebnis %{movie_query}
+  tvshow:
+    episode_duration: Episodes duration
+    first_air: First air date
+    seasons: Seasons
+    tvshow_information: TV Show information
+    tvshow_rating: TV Show ratings
   upload:
     add_cd_elements: Nächste Untertiteldatei hinzufügen (CD)
     add_new_movie: Neuen Film hinzufügen
@@ -17558,11 +17733,6 @@ de:
     write_new_comment: neuen Kommentar schreiben
     write_reply_to: antworten an
   value_not_yet_translated: Value not yet translated
-  views:
-    pagination:
-      last: 
-      next: 
-      truncate: 
 el:
   activerecord:
     attributes:
@@ -18727,28 +18897,37 @@ en:
   activerecord:
     attributes:
       active_record/base:
-        E-mail:
-          one: 
-        Full Name:
-          one: 
-        Role:
-          one: 
+        <span class="lit-key-generic" data-key="admin:
+          users:
+            index:
+              email" data-locale="fr">E-mail</span>:
+                one: 
+              full_name" data-locale="fr">Full Name</span>:
+                one: 
+              role" data-locale="fr">Role</span>:
+                one: 
       application_record:
-        E-mail:
-          one: 
-        Full Name:
-          one: 
-        Role:
-          one: 
+        <span class="lit-key-generic" data-key="admin:
+          users:
+            index:
+              email" data-locale="fr">E-mail</span>:
+                one: 
+              full_name" data-locale="fr">Full Name</span>:
+                one: 
+              role" data-locale="fr">Role</span>:
+                one: 
       lit/localization:
         translated_value: 
       user:
-        E-mail:
-          one: 
-        Full Name:
-          one: 
-        Role:
-          one: 
+        <span class="lit-key-generic" data-key="admin:
+          users:
+            index:
+              email" data-locale="fr">E-mail</span>:
+                one: 
+              full_name" data-locale="fr">Full Name</span>:
+                one: 
+              role" data-locale="fr">Role</span>:
+                one: 
         confirmation_sent_at: Confirmation sent at
         confirmation_token: Confirmation token
         confirmed_at: Confirmed at
@@ -19012,6 +19191,7 @@ en:
         full_name: Full Name
         page_title: Show User
         role: Role
+      success: 
       update:
         error: An error occurred when trying to update the user.
         success: User successfully updated.
@@ -19020,18 +19200,11 @@ en:
     <span class="lit-key-generic" data-key="admin:
       users:
         index:
-          email" data-locale="en">E-mail</span>: 
-          full_name" data-locale="en">Full Name</span>: 
-          role" data-locale="en">Role</span>: 
-    E-mail: 
-    Full Name: 
-    Role: 
-    current_password: 
-    email: 
+          email" data-locale="fr">E-mail</span>: 
+          full_name" data-locale="fr">Full Name</span>: 
+          role" data-locale="fr">Role</span>: 
     first_name: 
     last_name: 
-    password: 
-    password_confirmation: 
     role: 
     translated_value: 
   authorization:
@@ -19107,37 +19280,57 @@ en:
       about_x_hours:
         one: about 1 hour
         other: about %{count} hours
+        two: حوالي ساعتان
+        zero: حوالي صفر ساعات
       about_x_months:
         one: about 1 month
         other: about %{count} months
+        two: حوالي شهران
+        zero: حوالي صفر أشهر
       about_x_years:
         one: about 1 year
         other: about %{count} years
+        two: حوالي سنتان
+        zero: حوالي صفر سنوات
       almost_x_years:
         one: almost 1 year
         other: almost %{count} years
+        two: ما يقرب من سنتين
+        zero: ما يقرب من صفر سنوات
       half_a_minute: half a minute
       less_than_x_minutes:
         one: less than a minute
         other: less than %{count} minutes
+        two: أقل من دقيقتان
       less_than_x_seconds:
         one: less than 1 second
         other: less than %{count} seconds
+        two: أقل من ثانيتان
       over_x_years:
         one: over 1 year
         other: over %{count} years
+        two: أكثر من سنتين
+        zero: أكثر من صفر سنوات
       x_days:
         one: 1 day
         other: "%{count} days"
+        two: يومان
+        zero: صفر أيام
       x_minutes:
         one: 1 minute
         other: "%{count} minutes"
+        two: دقيقتان
+        zero: صفر دقائق
       x_months:
         one: 1 month
         other: "%{count} months"
+        two: شهران
+        zero: صفر أشهر
       x_seconds:
         one: 1 second
         other: "%{count} seconds"
+        two: ثانيتان
+        zero: صفر ثواني
     prompts:
       day: Day
       hour: Hour
@@ -19167,6 +19360,7 @@ en:
       unconfirmed: You have to confirm your email address before continuing.
       user:
         invalid: Invalid %{authentication_keys} or password.
+        not_found_in_database: Invalid %{authentication_keys} or password.
         timeout: Your session expired. Please sign in again to continue.
         unauthenticated: Vous devez vous connecter ou vous enregistrer pour continuer.
     mailer:
@@ -19315,8 +19509,16 @@ en:
       not_saved:
         one: '1 error prohibited this %{resource} from being saved:'
         other: "%{count} errors prohibited this %{resource} from being saved:"
+        two: "%{count} أخطاء منع %{resource} هذا من أن يتم حفظه:"
+        zero: "%{count} أخطاء منع %{resource} هذا من أن يتم حفظه:"
       odd: must be odd
-      other_than: must be other than %{count}
+      other_than:
+        few: الطول يجب ألاّ يكون %{count} أحرف
+        many: الطول يجب ألاّ يكون %{count} حرفاً
+        one: الطول يجب ألاّ يكون حرفاً وحداً
+        other: الطول يجب ألاّ يكون %{count} حرفاً
+        two: الطول يجب ألاّ يكون حرفان
+        zero: الطول يجب ألاّ يكون صفر أحرف
       present: must be blank
       record_invalid: 'Validation failed: %{errors}'
       required: must exist
@@ -19327,17 +19529,25 @@ en:
       too_long:
         one: is too long (maximum is 1 character)
         other: is too long (maximum is %{count} characters)
+        two: أطول من اللّازم (الحد الأقصى هو حرفان)
+        zero: أطول من اللّازم (الحد الأقصى هو ولا حرف)
       too_short:
         one: is too short (minimum is 1 character)
         other: is too short (minimum is %{count} characters)
+        two: أقصر من اللّازم (الحد الأدنى هو حرفان)
+        zero: أقصر من اللّازم (الحد الأدنى هو ولا حرف)
       wrong_length:
         one: is the wrong length (should be 1 character)
         other: is the wrong length (should be %{count} characters)
+        two: الطول غير مطابق للحد المطلوب (يجب أن يكون حرفان)
+        zero: الطول غير مطابق للحد المطلوب (يجب أن يكون ولا حرف)
     template:
       body: 'There were problems with the following fields:'
       header:
         one: 1 error prohibited this %{model} from being saved
         other: "%{count} errors prohibited this %{model} from being saved"
+        two: 'ليس بالامكان حفظ %{model}:  خطئان.'
+        zero: 'ليس بالامكان حفظ %{model}: لايوجد أخطاء.'
     unacceptable_request: 'A supported version is expected in the Accept header.
 
 '
@@ -20179,6 +20389,7 @@ en:
         DE: 198##
         FL: 322##
         GA: 301##
+        GO: 72###-###
         HI: 967##
         IA: 510##
         ID: 832##
@@ -20207,10 +20418,13 @@ en:
         OK: 730##
         OR: 979##
         PA: 186##
+        PR: 80###-###
         RI: 029##
+        RS: 90###-###
         SC: 299##
         SD: 577##
         TN: 383##
+        TO: 77###-###
         TX: 798##
         UT: 847##
         VA: 222##
@@ -41711,9 +41925,11 @@ en:
     downloaded_from: Downloaded from %{value}
     episode: Episode
     form_select: Select
+    full_home: Full home page
     log_in: log-in
     movie: Movie
     new_to_translate: Hello world, you need to be translated
+    new_to_translate_again: Hello world, please translate me
     new_window: Link will open in new window
     no_access: Access denied; you need to login or register
     no_results: No results found
@@ -41922,7 +42138,6 @@ en:
   lit:
     common:
       cancel: Cancel
-      changed_at: 
       previous_versions: Previous versions
       update: Update
       you_sure: Are you sure?
@@ -42239,6 +42454,8 @@ en:
           byte:
             one: Byte
             other: Bytes
+            two: Bytes
+            zero: Bytes
           eb: EB
           gb: GB
           kb: KB
@@ -42362,32 +42579,23 @@ en:
         <span class="lit-key-generic" data-key="admin:
           users:
             index:
-              email" data-locale="en">E-mail</span>: 
-              full_name" data-locale="en">Full Name</span>: 
-              role" data-locale="en">Role</span>: 
-        E-mail: 
-        Full Name: 
-        Role: 
+              email" data-locale="fr">E-mail</span>: 
+              full_name" data-locale="fr">Full Name</span>: 
+              role" data-locale="fr">Role</span>: 
       application_record:
         <span class="lit-key-generic" data-key="admin:
           users:
             index:
-              email" data-locale="en">E-mail</span>: 
-              full_name" data-locale="en">Full Name</span>: 
-              role" data-locale="en">Role</span>: 
-        E-mail: 
-        Full Name: 
-        Role: 
+              email" data-locale="fr">E-mail</span>: 
+              full_name" data-locale="fr">Full Name</span>: 
+              role" data-locale="fr">Role</span>: 
       user:
         <span class="lit-key-generic" data-key="admin:
           users:
             index:
-              email" data-locale="en">E-mail</span>: 
-              full_name" data-locale="en">Full Name</span>: 
-              role" data-locale="en">Role</span>: 
-        E-mail: 
-        Full Name: 
-        Role: 
+              email" data-locale="fr">E-mail</span>: 
+              full_name" data-locale="fr">Full Name</span>: 
+              role" data-locale="fr">Role</span>: 
     combinator: combinator
     condition: condition
     desc: descending
@@ -42605,6 +42813,8 @@ en:
       text: required
     'yes': 'Yes'
   stats:
+    airing_this_week: TV shows airing this week
+    airing_today_series: TV shows airing today
     db_queries: q
     downloaded_subtitles: Downloaded subtitles for last %{value} days
     files: files
@@ -42639,6 +42849,8 @@ en:
     top_rated_subtitles: Top rated subtitles for last %{value} days
     top_requested_subs: Top requested subtitles for last %{value} days
     top_uploaders: Top uploaders for last %{value} months
+    trending_movies: Trending movies
+    trending_tvshows: Trending TV Shows
     tv_movies: TV Movies
     uploaded_subtitles: Uploaded subtitles for last %{value} days
     users: users
@@ -42649,6 +42861,7 @@ en:
   subdetail:
     add_to_favourites: Add to favourites
     aka: AKA
+    all: All
     all_subs_for_movie: All subtitles for this movie
     all_subs_from_user: All subtitles from this user
     all_subs_in_lang: All subtitles for this movie in this language
@@ -42724,6 +42937,7 @@ en:
     uploader: Uploader
     uploader_comment: Uploader comment
     use_download_manager: Use OpenSubtitles Download Manager
+    view_all_transcript: View all transcript
     vote_for_subtitles: Vote for subtitles
     vote_for_subtitles2: Rate <b>quality</b> of subtitles
     vote_sub_title: 'Rate QUALITY of subtitles with %{value} point (%{value2})  '
@@ -42802,6 +43016,12 @@ en:
       original search URL was:   %{url}    %{total} subtitles matching:    %{search_results}    You
       can cancel receiving further notification by clicking here:  %{url_stop}  %{footer}'
     search_results_subj: OpenSubtitles.org search results %{movie_query}
+  tvshow:
+    episode_duration: Episodes duration
+    first_air: First air date
+    seasons: Seasons
+    tvshow_information: TV Show information
+    tvshow_rating: TV Show ratings
   upload:
     add_cd_elements: Add next subtitle (CD)
     add_new_movie: Add new movie
@@ -43815,29 +44035,7 @@ es:
     show: Show Details
   activerecord:
     attributes:
-      active_record/base:
-        E-mail:
-          one: 
-        Full Name:
-          one: 
-        Role:
-          one: 
-      application_record:
-        E-mail:
-          one: 
-        Full Name:
-          one: 
-        Role:
-          one: 
-      lit/localization:
-        translated_value: 
       user:
-        E-mail:
-          one: 
-        Full Name:
-          one: 
-        Role:
-          one: 
         confirmation_sent_at: Fecha de envío de confirmación
         confirmation_token: Código de confirmación
         confirmed_at: Fecha de confirmación
@@ -43848,8 +44046,6 @@ es:
         email: Email
         encrypted_password: Contraseña cifrada
         failed_attempts: Intentos fallidos
-        first_name: 
-        last_name: 
         last_sign_in_at: Fecha del último ingreso
         last_sign_in_ip: IP del último ingreso
         locked_at: Fecha de bloqueo
@@ -43859,7 +44055,6 @@ es:
         remember_me: Recordarme
         reset_password_sent_at: Fecha de envío de código para contraseña
         reset_password_token: Código para restablecer contraseña
-        role: 
         sign_in_count: Cantidad de ingresos
         unconfirmed_email: Email no confirmado
         unlock_token: Código de desbloqueo
@@ -43919,14 +44114,6 @@ es:
         link: Delete '%{object_label}'
         menu: Delete
         title: Delete %{model_label} '%{object_label}'
-  attributes:
-    E-mail: 
-    Full Name: 
-    Role: 
-    current_password: 
-    email: 
-    password: 
-    password_confirmation: 
   banner:
     new_subtitles: Nuevos subtítulos de películas
   comment:
@@ -44145,9 +44332,6 @@ es:
         y sigue el enlace de confirmación para finalizar la comprobación del nuevo
         correo electrónico.
       updated: Tu cuenta se ha actualizada.
-    session:
-      new:
-        sign_in: 
     sessions:
       already_signed_out: Sesión finalizada.
       new:
@@ -46350,9 +46534,6 @@ es:
     system_message: Mensajería
     to_post_comments: añadir comentarios
   helpers:
-    page_entries_info:
-      one_page:
-        display_entries: 
     select:
       prompt: Por favor seleccione
     submit:
@@ -46848,19 +47029,6 @@ es:
     any: cualquier
     asc: ascendente
     attribute: atributo
-    attributes:
-      active_record/base:
-        E-mail: 
-        Full Name: 
-        Role: 
-      application_record:
-        E-mail: 
-        Full Name: 
-        Role: 
-      user:
-        E-mail: 
-        Full Name: 
-        Role: 
     combinator: combinado
     condition: condición
     desc: descendente
@@ -52205,28 +52373,37 @@ fr:
   activerecord:
     attributes:
       active_record/base:
-        E-mail:
-          one: 
-        Full Name:
-          one: 
-        Role:
-          one: 
+        <span class="lit-key-generic" data-key="admin:
+          users:
+            index:
+              email" data-locale="fr">E-mail</span>:
+                one: 
+              full_name" data-locale="fr">Full Name</span>:
+                one: 
+              role" data-locale="fr">Role</span>:
+                one: 
       application_record:
-        E-mail:
-          one: 
-        Full Name:
-          one: 
-        Role:
-          one: 
+        <span class="lit-key-generic" data-key="admin:
+          users:
+            index:
+              email" data-locale="fr">E-mail</span>:
+                one: 
+              full_name" data-locale="fr">Full Name</span>:
+                one: 
+              role" data-locale="fr">Role</span>:
+                one: 
       lit/localization:
         translated_value: 
       user:
-        E-mail:
-          one: 
-        Full Name:
-          one: 
-        Role:
-          one: 
+        <span class="lit-key-generic" data-key="admin:
+          users:
+            index:
+              email" data-locale="fr">E-mail</span>:
+                one: 
+              full_name" data-locale="fr">Full Name</span>:
+                one: 
+              role" data-locale="fr">Role</span>:
+                one: 
         confirmation_sent_at: Date d'envoi de la confirmation
         confirmation_token: Clé de confirmation du mot de passe
         confirmed_at: Confirmé à
@@ -52237,7 +52414,7 @@ fr:
         email: Courriel
         encrypted_password: Mot de passe crypté
         failed_attempts: Tentatives échouées
-        first_name: 
+        first_name: Prénom
         last_name: 
         last_sign_in_at: Date de la dernière connexion
         last_sign_in_ip: IP de la dernière connexion
@@ -52314,20 +52491,33 @@ fr:
         done: Diff
         link: Diff  %{model_label}
     users:
+      edit:
+        page_title: 
       index:
         email: 
         full_name: 
         page_title: 
         role: 
+      show:
+        email: 
+        full_name: 
+        page_title: 
+        role: 
+      success: Succès
+      update:
+        success: 
   are_you_sure: 
   attributes:
-    E-mail: 
-    Full Name: 
-    Role: 
+    <span class="lit-key-generic" data-key="admin:
+      users:
+        index:
+          email" data-locale="fr">E-mail</span>: 
+          full_name" data-locale="fr">Full Name</span>: 
+          role" data-locale="fr">Role</span>: 
     current_password: Mot de passe actuel
-    email: 
-    password: 
-    password_confirmation: 
+    first_name: Prénom
+    last_name: Nom
+    role: 
     translated_value: 
   banner:
     new_subtitles: Nouveaux sous-titres
@@ -52400,39 +52590,59 @@ fr:
       about_x_hours:
         one: environ une heure
         other: environ %{count} heures
+        two: حوالي ساعتان
+        zero: حوالي صفر ساعات
       about_x_months:
         one: environ un mois
         other: environ %{count} mois
+        two: حوالي شهران
+        zero: حوالي صفر أشهر
       about_x_years:
         one: environ un an
         other: environ %{count} ans
+        two: حوالي سنتان
+        zero: حوالي صفر سنوات
       almost_x_years:
         one: presqu'un an
         other: presque %{count} ans
+        two: ما يقرب من سنتين
+        zero: ما يقرب من صفر سنوات
       half_a_minute: une demi-minute
       less_than_x_minutes:
         one: moins d'une minute
         other: moins de %{count} minutes
+        two: أقل من دقيقتان
         zero: moins d'une minute
       less_than_x_seconds:
         one: moins d'une seconde
         other: moins de %{count} secondes
+        two: أقل من ثانيتان
         zero: moins d'une seconde
       over_x_years:
         one: plus d'un an
         other: plus de %{count} ans
+        two: أكثر من سنتين
+        zero: أكثر من صفر سنوات
       x_days:
         one: 1 jour
         other: "%{count} jours"
+        two: يومان
+        zero: صفر أيام
       x_minutes:
         one: 1 minute
         other: "%{count} minutes"
+        two: دقيقتان
+        zero: صفر دقائق
       x_months:
         one: 1 mois
         other: "%{count} mois"
+        two: شهران
+        zero: صفر أشهر
       x_seconds:
         one: 1 seconde
         other: "%{count} secondes"
+        two: ثانيتان
+        zero: صفر ثواني
     prompts:
       day: Jour
       hour: Heure
@@ -52462,6 +52672,7 @@ fr:
       unconfirmed: Vous devez confirmer votre compte par courriel.
       user:
         invalid: Invalid %{authentication_keys} or password.
+        not_found_in_database: "%{authentication_keys} ou mot de passe incorrect."
         timeout: Your session expired. Please sign in again to continue.
         unauthenticated: Vous devez vous connecter ou vous enregistrer pour continuer.
     mailer:
@@ -52615,8 +52826,16 @@ fr:
           :'
         other: "%{count} erreurs ont empêché ce (cet ou cette) %{resource} d’être
           enregistré(e) :"
+        two: "%{count} أخطاء منع %{resource} هذا من أن يتم حفظه:"
+        zero: "%{count} أخطاء منع %{resource} هذا من أن يتم حفظه:"
       odd: doit être impair
-      other_than: doit être différent de %{count}
+      other_than:
+        few: الطول يجب ألاّ يكون %{count} أحرف
+        many: الطول يجب ألاّ يكون %{count} حرفاً
+        one: الطول يجب ألاّ يكون حرفاً وحداً
+        other: الطول يجب ألاّ يكون %{count} حرفاً
+        two: الطول يجب ألاّ يكون حرفان
+        zero: الطول يجب ألاّ يكون صفر أحرف
       present: doit être vide
       record_invalid: 'La validation a échoué : %{errors}'
       restrict_dependent_destroy:
@@ -52626,17 +52845,25 @@ fr:
       too_long:
         one: est trop long (pas plus d'un caractère)
         other: est trop long (pas plus de %{count} caractères)
+        two: أطول من اللّازم (الحد الأقصى هو حرفان)
+        zero: أطول من اللّازم (الحد الأقصى هو ولا حرف)
       too_short:
         one: est trop court (au moins un caractère)
         other: est trop court (au moins %{count} caractères)
+        two: أقصر من اللّازم (الحد الأدنى هو حرفان)
+        zero: أقصر من اللّازم (الحد الأدنى هو ولا حرف)
       wrong_length:
         one: ne fait pas la bonne longueur (doit comporter un seul caractère)
         other: ne fait pas la bonne longueur (doit comporter %{count} caractères)
+        two: الطول غير مطابق للحد المطلوب (يجب أن يكون حرفان)
+        zero: الطول غير مطابق للحد المطلوب (يجب أن يكون ولا حرف)
     template:
       body: 'Veuillez vérifier les champs suivants : '
       header:
         one: 'Impossible d''enregistrer ce(tte) %{model} : 1 erreur'
         other: 'Impossible d''enregistrer ce(tte) %{model} : %{count} erreurs'
+        two: 'ليس بالامكان حفظ %{model}:  خطئان.'
+        zero: 'ليس بالامكان حفظ %{model}: لايوجد أخطاء.'
   faker:
     address:
       building_number:
@@ -52751,6 +52978,11 @@ fr:
       - France
       postcode:
       - "#####"
+      postcode_by_state:
+        GO: 72###-###
+        PR: 80###-###
+        RS: 90###-###
+        TO: 77###-###
       secondary_address:
       - 'Apt. ###'
       - "# étage"
@@ -55054,9 +55286,11 @@ fr:
     downloaded_from: Téléchargé depuis %{value}
     episode: Episode
     form_select: Sélectionner
+    full_home: Page d'accueil complète
     log_in: s'identifier
     movie: Movie
     new_to_translate: Bonjour monde, te voilà traduit !
+    new_to_translate_again: Bonjour Monde, traduit moi s'il te plais
     new_window: Le lien s'ouvrira dans une nouvelle fenêtre
     no_access: Accès refusé; vous devez vous identifier ou bien créer un compte
     no_results: Aucun résultat
@@ -55083,9 +55317,14 @@ fr:
       localization:
         translated_value: 
       user:
+        current_password: 
         email: 
+        first_name: 
+        last_name: Nom
         password: 
+        password_confirmation: 
         remember_me: 
+        role: 
     page_entries_info:
       one_page:
         display_entries: 
@@ -55095,6 +55334,8 @@ fr:
       create: Créer un(e) %{model}
       submit: Enregistrer ce(tte) %{model}
       update: Modifier ce(tte) %{model}
+      user:
+        update: Modifier ce(tte) %{model}
   hint:
     forgotten_pass_0: Entrez votre <b>adresse e-mail</b> et nous vous enverrons un
       <b>nouveau mot de passe</b>. Vous pourrez le changer ultérieurement
@@ -55143,6 +55384,9 @@ fr:
       file, hdtv, bluray, torrent, anime, media, codecs, récents
     title: Sous-titres - Téléchargez des sous-titres DivX depuis la plus grosse base
       de données
+  i18n:
+    transliterate:
+      rule: 
   imdblook:
     imdbid: ID IMDB
     imdblookup: Recherche ID IMDB
@@ -55243,7 +55487,6 @@ fr:
   lit:
     common:
       cancel: Cancel
-      changed_at: 
       previous_versions: Previous versions
       update: Update
       you_sure: Are you sure?
@@ -55296,7 +55539,9 @@ fr:
     logged_in_as: Connecté comme
     logout: Déconnexion
     multisearch: Recherche Multiple
+    other_site_languages: Other site languages
     player: Lecteur
+    popular_site_languages: Popular site languages
     prepare: En cours
     profile: Profil
     register: Créer un compte
@@ -55488,6 +55733,8 @@ fr:
           byte:
             one: octet
             other: octets
+            two: Bytes
+            zero: Bytes
           gb: Go
           kb: ko
           mb: Mo
@@ -55609,17 +55856,26 @@ fr:
     attribute: attribut
     attributes:
       active_record/base:
-        E-mail: 
-        Full Name: 
-        Role: 
+        <span class="lit-key-generic" data-key="admin:
+          users:
+            index:
+              email" data-locale="fr">E-mail</span>: 
+              full_name" data-locale="fr">Full Name</span>: 
+              role" data-locale="fr">Role</span>: 
       application_record:
-        E-mail: 
-        Full Name: 
-        Role: 
+        <span class="lit-key-generic" data-key="admin:
+          users:
+            index:
+              email" data-locale="fr">E-mail</span>: 
+              full_name" data-locale="fr">Full Name</span>: 
+              role" data-locale="fr">Role</span>: 
       user:
-        E-mail: 
-        Full Name: 
-        Role: 
+        <span class="lit-key-generic" data-key="admin:
+          users:
+            index:
+              email" data-locale="fr">E-mail</span>: 
+              full_name" data-locale="fr">Full Name</span>: 
+              role" data-locale="fr">Role</span>: 
     combinator: combinateur
     condition: condition
     desc: descendant
@@ -55830,6 +56086,8 @@ fr:
     you_can_drag_drop: Vous pouvez glisser et déposer vos fichiers pour en trouver
       les sous-titres
   stats:
+    airing_this_week: Séries TV en diffusion cette semaine
+    airing_today_series: Séries TV diffusées aujourd'hui
     db_queries: rq
     downloaded_subtitles: Sous-titres téléchargés depuis %{value} jours
     files: fichiers
@@ -55864,6 +56122,8 @@ fr:
     top_rated_subtitles: Sous-titres les mieux notés depuis %{value} jours
     top_requested_subs: Sous-titres les plus recherchés depuis %{value} jours
     top_uploaders: Top contributeurs depuis %{value} mois
+    trending_movies: Films populaires
+    trending_tvshows: Séries TV populaires
     tv_movies: Téléfilms
     uploaded_subtitles: Sous-titres ajoutés depuis %{value} jours
     users: utilisateurs
@@ -55874,6 +56134,7 @@ fr:
   subdetail:
     add_to_favourites: Ajouter aux favoris
     aka: Titres alternatifs (AKAS)
+    all: Toutes
     all_subs_for_movie: Tous les sous-titres pour ce film
     all_subs_from_user: Tous les sous-titres de ce contributeur
     all_subs_in_lang: Tous les sous-titres pour ce film dans cette langue
@@ -55949,6 +56210,7 @@ fr:
     uploader: Contributeur
     uploader_comment: Commentaire du contributeur
     use_download_manager: Utiliser OpenSubtitles Download Manager
+    view_all_transcript: Voir la transcription complète
     vote_for_subtitles: Votez pour ces sous-titres
     vote_for_subtitles2: Votre avis sur la <b>qualité</b> des sous-titres
     vote_sub_title: Donnez %{value} point(s) (%{value2})
@@ -56031,6 +56293,12 @@ fr:
       sous-titres correspondent:      %{search_results}      Vous pouvez annuler la
       réception de notifications supplémentaires en suivant ce lien :      %{url_stop}   %{footer}'
     search_results_subj: Résultat de la recherche %{movie_query} sur OpenSubtitles.org
+  tvshow:
+    episode_duration: Durée des épisodes
+    first_air: Date de première diffusion
+    seasons: Saisons
+    tvshow_information: Informations sur la série TV
+    tvshow_rating: Notes de la série TV
   upload:
     add_cd_elements: Ajouter le sous-titre suivant (CD)
     add_new_movie: Ajouter un nouveau film
@@ -82816,29 +83084,7 @@ pt-BR:
     show: Show Details
   activerecord:
     attributes:
-      active_record/base:
-        E-mail:
-          one: 
-        Full Name:
-          one: 
-        Role:
-          one: 
-      application_record:
-        E-mail:
-          one: 
-        Full Name:
-          one: 
-        Role:
-          one: 
-      lit/localization:
-        translated_value: 
       user:
-        E-mail:
-          one: 
-        Full Name:
-          one: 
-        Role:
-          one: 
         confirmation_sent_at: Confirmação enviada em
         confirmation_token: Token de confirmação
         confirmed_at: Confirmado em
@@ -82849,8 +83095,6 @@ pt-BR:
         email: Email
         encrypted_password: Senha criptografada
         failed_attempts: Tentativas sem sucesso
-        first_name: 
-        last_name: 
         last_sign_in_at: Último acesso em
         last_sign_in_ip: Último IP de acesso
         locked_at: Bloqueado em
@@ -82860,7 +83104,6 @@ pt-BR:
         remember_me: Lembre-se de mim
         reset_password_sent_at: Resetar senha enviado em
         reset_password_token: Resetar token de senha
-        role: 
         sign_in_count: Contagem de acessos
         unconfirmed_email: E-mail não confirmado
         unlock_token: Token de desbloqueio
@@ -82920,14 +83163,6 @@ pt-BR:
         link: Delete '%{object_label}'
         menu: Delete
         title: Delete %{model_label} '%{object_label}'
-  attributes:
-    E-mail: 
-    Full Name: 
-    Role: 
-    current_password: 
-    email: 
-    password: 
-    password_confirmation: 
   banner:
     new_subtitles: Novas legendas para filmes
   comment:
@@ -84125,9 +84360,6 @@ pt-BR:
     system_message: Mensagem do sistema
     to_post_comments: para escrever comentários
   helpers:
-    page_entries_info:
-      one_page:
-        display_entries: 
     select:
       prompt: Por favor selecione
     submit:
@@ -84614,19 +84846,6 @@ pt-BR:
     any: algum
     asc: ascendente
     attribute: atributo
-    attributes:
-      active_record/base:
-        E-mail: 
-        Full Name: 
-        Role: 
-      application_record:
-        E-mail: 
-        Full Name: 
-        Role: 
-      user:
-        E-mail: 
-        Full Name: 
-        Role: 
     combinator: combinador
     condition: condição
     desc: descendente
@@ -85088,51 +85307,23 @@ pt-PT:
     show: Show Details
   activerecord:
     attributes:
-      active_record/base:
-        E-mail:
-          one: 
-        Full Name:
-          one: 
-        Role:
-          one: 
-      application_record:
-        E-mail:
-          one: 
-        Full Name:
-          one: 
-        Role:
-          one: 
-      lit/localization:
-        translated_value: 
       user:
-        E-mail:
-          one: 
-        Full Name:
-          one: 
-        Role:
-          one: 
         confirmation_sent_at: Confirmation sent at
         confirmation_token: Confirmation token
         confirmed_at: Confirmed at
         created_at: Created at
-        current_password: 
         current_sign_in_at: Current sign in at
         current_sign_in_ip: Current sign in IP
-        email: 
         encrypted_password: Encrypted password
         failed_attempts: Failed attempts
-        first_name: 
-        last_name: 
         last_sign_in_at: Last sign in at
         last_sign_in_ip: Last sign in IP
         locked_at: Locked at
         password: Senha
-        password_confirmation: 
         remember_created_at: Remember created at
         remember_me: Remember me
         reset_password_sent_at: Reset password sent at
         reset_password_token: Reset password token
-        role: 
         sign_in_count: Sign in count
         unconfirmed_email: Unconfirmed email
         unlock_token: Unlock token
@@ -85192,16 +85383,6 @@ pt-PT:
         link: Delete '%{object_label}'
         menu: Delete
         title: Delete %{model_label} '%{object_label}'
-  attributes:
-    E-mail: 
-    Full Name: 
-    Role: 
-    current_password: 
-    email: 
-    first_name: 
-    last_name: 
-    password: 
-    password_confirmation: 
   banner:
     new_subtitles: Novas legendas no servidor
   comment:
@@ -85280,9 +85461,6 @@ pt-PT:
         update: Update
         we_need_your_current_password_to_confirm_your_changes: we need your current
           password to confirm your changes
-    shared:
-      links:
-        back: 
   editsub:
     correct: Corrigir
     correct_data: Corrigir os dados das legendas
@@ -85313,18 +85491,6 @@ pt-PT:
     system_message: Mensagem do Sistema
     to_post_comments: para escrever comentários
   header: Localization keys
-  helpers:
-    label:
-      user:
-        current_password: 
-        email: 
-        first_name: 
-        last_name: 
-        password: 
-        password_confirmation: 
-    page_entries_info:
-      one_page:
-        display_entries: 
   hint:
     forgotten_pass_0: Escreva o seu <b>E-Mail</b>, receberá uma <b>nova password</b>,
       depois de se ligar pode altera-la
@@ -85667,7 +85833,6 @@ pt-PT:
     edit-profile: Profile
     home: Home
     sign-out: Logout
-    users: 
   number:
     currency:
       format:
@@ -85787,20 +85952,6 @@ pt-PT:
     username: Nome de Utilizador
     web_language: Idioma do Site
     weekly: semanalmente
-  ransack:
-    attributes:
-      active_record/base:
-        E-mail: 
-        Full Name: 
-        Role: 
-      application_record:
-        E-mail: 
-        Full Name: 
-        Role: 
-      user:
-        E-mail: 
-        Full Name: 
-        Role: 
   report:
     change_wrong_fields: Modificar texto
     delete_subtitles: Apagar legendas
@@ -86185,41 +86336,6 @@ pt-PT:
     write_new_comment: Escreva novo comentário
     write_reply_to: Escreva resposta para
   value_not_yet_translated: Value not yet translated
-  views:
-    pagination:
-      last: 
-      next: 
-      truncate: 
-pt:
-  activerecord:
-    attributes:
-      user:
-        current_password: 
-        email: 
-        first_name: 
-        last_name: 
-        password: 
-        password_confirmation: 
-  devise:
-    shared:
-      links:
-        back: 
-  helpers:
-    label:
-      user:
-        current_password: 
-        email: 
-        first_name: 
-        last_name: 
-        password: 
-        password_confirmation: 
-  navigation:
-    users: 
-  views:
-    pagination:
-      last: 
-      next: 
-      truncate: 
 ro:
   activerecord:
     attributes:
@@ -90745,9 +90861,47 @@ si:
     write_new_comment: Write new comment
     write_reply_to: Write reply to
 sk:
+  actions:
+    back: Back
+    column_name: Actions
+    delete: Delete
+    discard: Discard
+    draft: Draft
+    edit: Edit
+    new: New
+    publish: Publish
+    ready: Ready to publish
+    show: Show Details
   activerecord:
     attributes:
+      active_record/base:
+        <span class="lit-key-generic" data-key="admin:
+          users:
+            index:
+              email" data-locale="fr">E-mail</span>:
+                one: 
+              full_name" data-locale="fr">Full Name</span>:
+                one: 
+              role" data-locale="fr">Role</span>:
+                one: 
+      application_record:
+        <span class="lit-key-generic" data-key="admin:
+          users:
+            index:
+              email" data-locale="fr">E-mail</span>:
+                one: 
+              full_name" data-locale="fr">Full Name</span>:
+                one: 
+              role" data-locale="fr">Role</span>:
+                one: 
+      lit/localization:
+        translated_value: 
       user:
+        <span class="lit-key-generic" data-key="admin:
+          users:
+            index:
+              email" data-locale="fr">E-mail</span>:
+                one: 
         confirmation_sent_at: Potvrdenie poslané
         confirmation_token: Potvrdzovací kľúč
         confirmed_at: Potvrdené
