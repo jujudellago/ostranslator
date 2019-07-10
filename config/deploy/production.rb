@@ -28,20 +28,20 @@ set :deploy_via, :copy
 
 
 set :default_environment, {
-  'PATH' => "/home/deploy/.rvm/gems/ruby-2.3.1@global/bin:/home/deploy/.rvm/gems/ruby-2.3.1/bin:/home/deploy/.rvm/bin:$PATH",
-  'RUBY_VERSION' => 'ruby 2.3.1',
-  'GEM_HOME'     => '/home/deploy/.rvm/gems/ruby-2.3.1',
-  'GEM_PATH'     => '/home/deploy/.rvm/gems/ruby-2.3.1',
-  'BUNDLE_PATH'  => '/home/deploy/.rvm/gems/ruby-2.3.1'  # If you are using bundler.
+  'PATH' => "/home/deploy/.rvm/gems/ruby-2.4.0@global/bin:/home/deploy/.rvm/gems/ruby-2.4.0/bin:/home/deploy/.rvm/bin:$PATH",
+  'RUBY_VERSION' => 'ruby 2.4.0',
+  'GEM_HOME'     => '/home/deploy/.rvm/gems/ruby-2.4.0',
+  'GEM_PATH'     => '/home/deploy/.rvm/gems/ruby-2.4.0',
+  'BUNDLE_PATH'  => '/home/deploy/.rvm/gems/ruby-2.4.0'  # If you are using bundler.
 }
 
 
 
 set :rvm_path,  "/home/deploy/.rvm"
 
-set :bundle_cmd, "/home/deploy/.rvm/gems/ruby-2.3.1/bin/bundle"
-set :bundle_dir, "/home/deploy/.rvm/gems/ruby-2.3.1"
-set :bundle_path, "/home/deploy/.rvm/gems/ruby-2.3.1"
+set :bundle_cmd, "/home/deploy/.rvm/gems/ruby-2.4.0/bin/bundle"
+set :bundle_dir, "/home/deploy/.rvm/gems/ruby-2.4.0"
+set :bundle_path, "/home/deploy/.rvm/gems/ruby-2.4.0"
 
 
 server '178.63.84.93', roles: %w(app web db), primary: true, user: 'deploy'
