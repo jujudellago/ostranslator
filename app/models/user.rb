@@ -9,6 +9,8 @@ class User < ApplicationRecord
 
 
   has_and_belongs_to_many :osdb_languages
+  #has_and_belongs_to_many :assigned_languages, class_name: "OsdbLanguage", inverse_of: :users
+  
   
   
   # **We should NOT validate e-mail uniqueness, e-mail regex or password

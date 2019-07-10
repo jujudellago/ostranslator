@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180202103445) do
+ActiveRecord::Schema.define(version: 2018_11_29_103819) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 20180202103445) do
     t.integer "incomming_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean "localization_key_is_deleted", default: false, null: false
     t.index ["incomming_id"], name: "index_lit_incomming_localizations_on_incomming_id"
     t.index ["locale_id"], name: "index_lit_incomming_localizations_on_locale_id"
     t.index ["localization_id"], name: "index_lit_incomming_localizations_on_localization_id"
@@ -58,6 +59,8 @@ ActiveRecord::Schema.define(version: 20180202103445) do
     t.datetime "updated_at"
     t.boolean "is_completed", default: false
     t.boolean "is_starred", default: false
+    t.boolean "is_deleted", default: false, null: false
+    t.boolean "is_visited_again", default: false, null: false
     t.index ["localization_key"], name: "index_lit_localization_keys_on_localization_key", unique: true
   end
 
@@ -78,6 +81,7 @@ ActiveRecord::Schema.define(version: 20180202103445) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.index ["locale_id"], name: "index_lit_localizations_on_locale_id"
+    t.index ["localization_key_id", "locale_id"], name: "index_lit_localizations_on_localization_key_id_and_locale_id", unique: true
     t.index ["localization_key_id"], name: "index_lit_localizations_on_localization_key_id"
   end
 

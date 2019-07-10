@@ -1,13 +1,101 @@
 ---
+fr:
+  ad:
+    vpn_heading: Protégez votre traffic Internet !
+    your_ip_exposed: "Votre adresse IP est exposée:"
+    location: "Localisation:"
+    explain_1: "Masquez votre localisation, protégez votre vie privée"
+    explain_2: "Empêchez les FAI et les pirates informatiques d'enregistrer votre IP et tout ce que vous faites en ligne"
+    signup_button: Protégez votre vie privée
+    signup_button_over: Commencez votre semaine gratuite
+    no_thanks: Non, merci.
+  flash:
+    actions:
+      create:
+        notice: "%{resource_name} a été créé avec succès."
+      destroy:
+        alert: "%{resource_name} n'a pas pu être détruit."
+        notice: "%{resource_name} a été détruit avec succès."
+      update:
+        notice: "%{resource_name} a été mis à jour avec succès."
+  profile:
+    import_from_org: Importer depuis opensubtitles.org
+  menu:
+    download_history: Historique des téléchargements
+  global:
+    import_osdb_account: Importer votre compte depuis opensubtitles.org
+    import_osdb_account_instructons: Entrez l'email utilisé sur opensubtitles.org, vous recevrez ensuite un lien qui vous permettra de définir votre mot de passe. Si vous disposez d'un status VIP sur opensubtitles.org, celui-ci sera étagalement transféré.
+    import_osdb_account_reset_pass_instructions: Votre compte a été créé avec succès, vous pouvez maintenant définir votre mot de passe.
+    import_osdb_account_successfull: Votre compte a été importé avec succès, veuillez consulter votre boite mail
+    import_osdb_not_found_email: Le compte n'a pas pu être importé, l'email n'a pas été trouvé.
+    select_al_one: Choisissez au moins un type de problème
+  routes:
+    movies: films
+    tvshows: series-tv
+    subtitles: sous-titres
+  subdetail:
+    rate_subtitle: Noter le sous-titre
+    ocr_errors: Erreurs OCR
+    bad_translation: Mauvaise traduction
+    encoding_error: Erreurs d'encodage
+    sync_errors: Erreurs de synchronisation
+    uncomplete_translation: Traduction incomplète
+    missing_parts: Parties manquantes
+    wrong_movie: Mauvais film
+    wrong_language: Mauvaise langue
+    stolen_subtitle: Sous-tites volés
+    reply_to_comment: Répondre au commentaire
+    already_rated: Vous avez déjà noté ce sous-titre. Si vous désirez changer votre note, vous devez d'abord effacer la première
+    other: Autre
+    comment_created:
+  html:
+    ai_translated_info: Ce sous-titre a été traduit par notre nouveau système expérimental d'intelligence artificielle
+  search:
+    ai_translated: Traduit par intelligence artificielle
+es:
+  ad:
+    vpn_heading: PROTEJA SU TRÁFICO DE INTERNET
+    your_ip_exposed: "Su dirección IP está expuesta:"
+    location: "Ubicación:"
+    explain_1: "Ocultar su ubicación, proteger su privacidad"
+    explain_2: "Impida que los ISP y los hackers registren su IP y todo lo que hace en línea"
+    signup_button: Proteja su privacidad
+    signup_button_over: Comienza tu semana libre ahora
+    no_thanks: No, gracias
+  html:
+    ai_translated_info: Este subtítulo ha sido traducido por nuestro nuevo sistema de inteligencia artificial experimental
+  search:
+    ai_translated: Traducido por inteligencia artificial
+pl:
+  html:
+    ai_translated_info: Ten podtytuł został przetłumaczony przez nasz nowy eksperymentalny system sztucznej inteligencji
+  search:
+    ai_translated: Tłumaczone przez sztuczną inteligencję
+it:
+  html:
+    ai_translated_info: Questo sottotitolo è stato tradotto dal nostro nuovo sistema sperimentale di intelligenza artificiale.
+  search:
+    ai_translated: Tradotto dall'intelligenza artificiale
+de:
+  html:
+    ai_translated_info: Dieser Untertitel wurde von unserem neuen experimentellen künstlichen Intelligenzsystem übersetzt.
+  search:
+    ai_translated: Übersetzt von künstlicher Intelligenz
+nl:
+  html:
+    ai_translated_info: Deze ondertitel is vertaald door ons nieuwe experimentele kunstmatige intelligentiesysteem
+  search:
+    ai_translated: Vertaald door kunstmatige intelligentie
 en:
   global:
     form_select: Select
-    new_to_translate: Hello world, you need to be translated
   menu:
     upload: Upload
-    show_me_all_languages: Show me all languages
-    other_site_languages: Other site languages
-    choose_site_languages: Choose the site language 
+    home: Home
+    welcome: Welcome
+    download_history: Download history
+  tvshow:
+    episode_duration: Episodes duration
   request:
     my_requests: My requests
   vajax:
@@ -16,20 +104,42 @@ en:
     new_subtitles: New subtitles for movies
   html:
     title: Subtitles - download movie and TV Series subtitles from the biggest open subtitles database
+    ai_translated_info: This subtitle was translated by our new experimental AI system
   profile:
     profile_for_user: Profile for user
+    uploads: Uploads
+    notifications: Notifications
   upload:
     upload_subtitles: Upload subtitles
+    release_group: Release group
+    tvshow_information: TV Show information
   search:
+    ai_translated: AI Translated
     advanced_search: Advanced search
-    latest_series: Latest TV Shows
+    search_options: Search options
+    imdbid_not_found: "IMDB id not found"
   imdblook:
     imdblookup: IMDB ID lookup
   subdetail:
-    movie_rating: Movie Rating
-    your_file_is_ready: Your file is ready    
-    max_quota_reached: You have downloaded your allowed %{requests} subtitles for 24h.
-    quota_renew: Your quota will be renewed in %{time}     
+    you_have_requested:
+      zero: You didn't request any downloads on your daily quota of %{count}/%{allowed}
+      one:  You have requested %{count} download on your daily quota of %{allowed}
+      other:  You have requested %{count} downloads on your daily quota of %{allowed}
+    view_all_transcript: View all transcript
+    all: All
+    reply_to_comment: Reply to comment
+    rate_subtitle: Rate subtitle
+    ocr_errors: OCR errors
+    bad_translation: Bad Translations
+    encoding_error: Encoding errors
+    sync_errors: Sync errors
+    uncomplete_translation: Uncomplete translation
+    missing_parts: Missing parts
+    wrong_movie: Wrong movie
+    wrong_language: Wrong language
+    stolen_subtitle: Stolen subttile
+    other: Other
+    already_rated: You have already rated this subtitle. If you would like to change your rating, you must delete the existing one first.
   report:
     report_wrong_data: Report wrong data for subtitles
   editsub:
@@ -38,10 +148,14 @@ en:
     files: files
     tv_movies: TV Movies
     videos: Videos
-    video_games: Video Games     
-    top_rated_series: Top rated TV Shows   
+    video_games: Video Games
+    top_rated_series: Top rated TV Shows
     on_air_series: TV Shows on air
     popular_series: Popular TV Shows
+    airing_today_series: TV shows airing today
+    airing_this_week: TV shows airing this week
+    trending_movies: Trending movies
+    trending_tvshows: Trending TV Shows
   languages:
     Albanian: Albanian
   hint:
@@ -58,4 +172,11 @@ en:
   java:
     BLogin: Log-In
   ad:
-    advertise_with_us: Advertise your product or brand here   contact %{url} today
+    vpn_heading: PROTECT YOUR INTERNET TRAFFIC
+    your_ip_exposed: "Your IP address is exposed:"
+    location: "Location:"
+    explain_1: "Hide your location, protect your privacy"
+    explain_2: "Stop ISPs and Hackers from Logging Your IP and Everything You Do online"
+    signup_button: Protect your privacy
+    signup_button_over: Start your free week now
+    no_thanks: No, thanks

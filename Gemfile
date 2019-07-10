@@ -46,7 +46,7 @@ gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootst
 
 
 #gem 'lit', :path => "/Users/juju/Dropbox/Brano-Julien-Stuff/custom-gems/lit"
-gem 'lit', :git => 'git://github.com/jujudellago/lit.git'
+gem 'lit' , :git => 'git://github.com/jujudellago/lit.git'
 
 # List of countries and their respective states and cities
 gem 'city-state'
