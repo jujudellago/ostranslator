@@ -80,7 +80,7 @@ namespace :deploy do
  
   task :copy_config do
     on roles(:app)  do
-      execute :cp,  "  -Rf #{shared_path}/config/database.yml #{release_path}/config/"
+      #execute :cp,  "  -Rf #{shared_path}/config/database.yml #{release_path}/config/"
       execute :cp,  "  -Rf #{shared_path}/config/initializers #{release_path}/config/"
       execute :cp,  "  -Rf #{shared_path}/config/environments #{release_path}/config/"
     end
