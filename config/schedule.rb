@@ -6,7 +6,7 @@
 # Example:
 #
 env :PATH, ENV['PATH']
-env :GEM_PATH, "/home/deploy/.rvm/gems/ruby-2.3.1:/home/deploy/.rvm/gems/ruby-2.3.1@global"
+env :GEM_PATH, "/home/deploy/.rvm/gems/ruby-2.4.0:/home/deploy/.rvm/gems/ruby-2.4.0@global"
 
 
 
