@@ -69,6 +69,7 @@ gem 'pundit'
 gem 'mail_form', '1.7.1'
 # HTTP caching
 gem 'rack-cache'
+gem 'bootsnap', require: false
 
 gem 'ffi', '1.9.24'
 
