@@ -72,4 +72,4 @@ spec/data
 config/initializers/secret_token.rb
 config/secrets.yml
 config/mongoid.yml
-config/boot.rb
+#config/boot.rb
