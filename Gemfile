@@ -140,7 +140,7 @@ group :development do
     gem 'capistrano-rails',     require: false
     gem 'capistrano-yarn'
   #  gem 'rvm-capistrano',     require: false
-    gem 'capistrano-rvm'
+    gem 'capistrano-rbenv'
     gem 'capistrano-bundler', require: false
     #gem 'capistrano3-puma',    require: false
     gem 'capistrano3-puma', github: "seuros/capistrano-puma"
