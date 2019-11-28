@@ -19,7 +19,8 @@
 # role :web, %w{user1@primary.com user2@additional.com}, other_property: :other_value
 # role :db,  %w{deploy@example.com}
 
-#server '172.20.120.2', roles: %w(app web), user: 'deploy'
+#server "178.63.84.93", roles: %w(app web db), primary: true, user: "deploy"
+server "172.20.120.2", roles: %w(app web), user: "deploy"
 
 set :deploy_to, "/home/deploy/osdb_translator"
 set :deploy_via, :copy
@@ -32,8 +33,6 @@ set :rbenv_ruby, "/home/deploy/.rbenv/shims/ruby"
 set :rbenv_map_bins, %w(rake gem bundle ruby rails puma pumactl)
 set :rbenv_roles, :all
 set :rbenv_ruby, File.read(".ruby-version").strip
-
-server "178.63.84.93", roles: %w(app web db), primary: true, user: "deploy"
 
 set :nginx_sites_available_path, "/etc/nginx/sites-available"
 set :nginx_sites_enabled_path, "/etc/nginx/sites-enabled"
