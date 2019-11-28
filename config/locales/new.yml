@@ -24,6 +24,8 @@ fr:
     import_from_org: Importer depuis opensubtitles.org
   menu:
     download_history: Historique des téléchargements
+    latest_movie_subtitles: Derniers sous-titres de films
+    latest_tv_subtitles: Derniers sous-titres de séries TV
   global:
     import_osdb_account: Importer votre compte depuis opensubtitles.org
     import_osdb_account_instructons: Entrez l'email utilisé sur opensubtitles.org, vous recevrez ensuite un lien qui vous permettra de définir votre mot de passe. Si vous disposez d'un status VIP sur opensubtitles.org, celui-ci sera étagalement transféré.
@@ -57,6 +59,7 @@ fr:
     ai_translated_info: Ce sous-titre a été traduit par notre nouveau système expérimental d'intelligence artificielle
   search:
     ai_translated: Traduit par intelligence artificielle
+    latest_forum_posts: Derniers posts du forum
 es:
   ad:
     vpn_heading: PROTEJA SU TRÁFICO DE INTERNET
@@ -101,11 +104,15 @@ en:
   global:
     form_select: Select
     extension: Browser extension
+    show_page: Show page
+    follow_subtitles_rss: Follow subtitles uploads by RSS
   menu:
     upload: Upload
     home: Home
     welcome: Welcome
     download_history: Download history
+    latest_movie_subtitles: Latest Movie subtitles
+    latest_tv_subtitles: Latest TV subtitles
   tvshow:
     episode_duration: Episodes duration
   request:
@@ -125,20 +132,25 @@ en:
     upload_subtitles: Upload subtitles
     release_group: Release group
     tvshow_information: TV Show information
+    file_name: File name
+    replace_name_expl: Replace downloaded file name
   search:
     ai_translated: AI Translated
     advanced_search: Advanced search
     search_options: Search options
     imdbid_not_found: "IMDB id not found"
+    latest_forum_posts: Latest forum posts
   imdblook:
     imdblookup: IMDB ID lookup
   subdetail:
+    you_have_requested_unlimited: "You have requested %{count} downloads today. You have unlimited downloads enabled, enjoy !"
     you_have_requested:
       zero: You didn't request any downloads on your daily quota of %{count}/%{allowed}
       one:  You have requested %{count} download on your daily quota of %{allowed}
       other:  You have requested %{count} downloads on your daily quota of %{allowed}
     view_all_transcript: View all transcript
     all: All
+    all_subtitles_for: All subtitles for %{title}
     request_translation: Request translation
     reply_to_comment: Reply to comment
     rate_subtitle: Rate subtitle

@@ -7,8 +7,6 @@
 # server "example.com", user: "deploy", roles: %w{app web}, other_property: :other_value
 # server "db.example.com", user: "deploy", roles: %w{db}
 
-
-
 # role-based syntax
 # ==================
 
@@ -23,54 +21,44 @@
 
 #server '172.20.120.2', roles: %w(app web), user: 'deploy'
 
-set :deploy_to, "/data/www/osdb_translator"
+set :deploy_to, "/home/deploy/osdb_translator"
 set :deploy_via, :copy
 
+set :rbenv_type, :user
+#set :rbenv_custom_path, '/usr/local'
+set :rbenv_ruby, "2.6.5"
+set :rbenv_ruby, "/home/deploy/.rbenv/shims/ruby"
 
-set :default_environment, {
-  'PATH' => "/home/deploy/.rvm/gems/ruby-2.4.0@global/bin:/home/deploy/.rvm/gems/ruby-2.4.0/bin:/home/deploy/.rvm/bin:$PATH",
-  'RUBY_VERSION' => 'ruby 2.4.0',
-  'GEM_HOME'     => '/home/deploy/.rvm/gems/ruby-2.4.0',
-  'GEM_PATH'     => '/home/deploy/.rvm/gems/ruby-2.4.0',
-  'BUNDLE_PATH'  => '/home/deploy/.rvm/gems/ruby-2.4.0'  # If you are using bundler.
-}
+set :rbenv_map_bins, %w(rake gem bundle ruby rails puma pumactl)
+set :rbenv_roles, :all
+set :rbenv_ruby, File.read(".ruby-version").strip
 
+server "178.63.84.93", roles: %w(app web db), primary: true, user: "deploy"
 
+set :nginx_sites_available_path, "/etc/nginx/sites-available"
+set :nginx_sites_enabled_path, "/etc/nginx/sites-enabled"
 
-set :rvm_path,  "/home/deploy/.rvm"
-
-set :bundle_cmd, "/home/deploy/.rvm/gems/ruby-2.4.0/bin/bundle"
-set :bundle_dir, "/home/deploy/.rvm/gems/ruby-2.4.0"
-set :bundle_path, "/home/deploy/.rvm/gems/ruby-2.4.0"
-
-
-server '178.63.84.93', roles: %w(app web db), primary: true, user: 'deploy'
-
-set :nginx_sites_available_path, "/usr/local/etc/nginx/sites-available"
-set :nginx_sites_enabled_path, "/usr/local/etc/nginx/sites-enabled"
-
-set :user, 'deploy'
-set :puma_threads,    [4, 16]
-set :puma_workers,    0
+set :user, "deploy"
+set :puma_threads, [4, 16]
+set :puma_workers, 0
 
 set :puma_user, fetch(:user)
-set :puma_rackup, -> { File.join(current_path, 'config.ru') }
+set :puma_rackup, -> { File.join(current_path, "config.ru") }
 set :puma_role, :app
-set :puma_env, fetch(:rack_env, fetch(:rails_env, 'french'))
-set :puma_bind,       "unix:///data/www/osdb_translator/shared/puma.sock"
-set :puma_state,      "#{shared_path}/tmp/pids/puma.state"
-set :puma_pid,        "#{shared_path}/tmp/pids/puma.pid"
+set :puma_env, fetch(:rack_env, fetch(:rails_env, "french"))
+set :puma_bind, "unix:///home/deploy/osdb_translator/shared/puma.sock"
+set :puma_state, "#{shared_path}/tmp/pids/puma.state"
+set :puma_pid, "#{shared_path}/tmp/pids/puma.pid"
 set :puma_access_log, "#{release_path}/log/puma.error.log"
-set :puma_conf,       "#{shared_path}/config/puma.rb"
-set :puma_error_log,  "#{release_path}/log/puma.access.log"
+set :puma_conf, "#{shared_path}/config/puma.rb"
+set :puma_error_log, "#{release_path}/log/puma.access.log"
 #set :ssh_options,     { forward_agent: true, user: fetch(:user), keys: %w(~/.ssh/id_rsa.pub) }
 set :puma_preload_app, true
 set :puma_worker_timeout, nil
 set :puma_init_active_record, true  # Change to false when not using ActiveRecord
 
-
-#role :resque_worker, "178.63.84.93"  
-#role :resque_scheduler, "178.63.84.93"  
+#role :resque_worker, "178.63.84.93"
+#role :resque_scheduler, "178.63.84.93"
 #set :resque_environment_task, true
 #
 #set :workers, { "*" => 3 }
@@ -78,11 +66,10 @@ set :puma_init_active_record, true  # Change to false when not using ActiveRecor
 #after "puma:restart", "resque:restart"
 #
 # Default value for :linked_files is []
-set :linked_files, fetch(:linked_files, []).push('config/database.yml','config/application.yml','config/secrets.yml', 'config/application.rb', 'config/puma.rb')
+set :linked_files, fetch(:linked_files, []).push("config/database.yml", "config/application.yml", "config/secrets.yml", "config/application.rb", "config/puma.rb")
 
 # Default value for linked_dirs is []
-set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/assets')
-
+set :linked_dirs, fetch(:linked_dirs, []).push("log", "tmp/pids", "tmp/cache", "tmp/sockets", "vendor/bundle", "public/system", "public/assets")
 
 set :use_sudo, false
 
@@ -97,15 +84,11 @@ set :use_sudo, false
 #after "deploy", "rvm:trust_rvmrc"
 #
 
-
-
-
 #after :deploy, :symlink do
-#  on roles(:app)  do    
+#  on roles(:app)  do
 #    run "cp #{shared_path}/css/_colors* #{release_path}/assets/stylesheets/_colors.scss"
 #  end
 #end
-
 
 #after :deploy, :update_code do
 #  on roles(:app)  do
@@ -115,7 +98,6 @@ set :use_sudo, false
 
 #set :deploy_via, :remote_cache
 
-
 # Configuration
 # =============
 # You can set any configuration variable like in config/deploy.rb
@@ -123,8 +105,6 @@ set :use_sudo, false
 # For available Capistrano configuration variables see the documentation page.
 # http://capistranorb.com/documentation/getting-started/configuration/
 # Feel free to add new variables to customise your setup.
-
-
 
 # Custom SSH Options
 # ==================
@@ -153,54 +133,46 @@ set :use_sudo, false
 #     # password: 'please use keys'
 #   }
 
-
-
-
-SSHKit::Backend::Netssh.configure do |ssh|
-  ssh.connection_timeout = 30
-  ssh.ssh_options = {
-    keys: %w(/home/juju/.ssh/id_rsa),
-    forward_agent: false,
-    auth_methods: %w(publickey password)
-  }
-end
-
+set :ssh_options, {
+  user: "deploy",
+  forward_agent: true,
+  paranoid: true,
+  keys: "~/.ssh/id_rsa",
+}
 
 #task :generate_500_html do
 #  on roles(:web) do |host|
 #     cache_path=File.join(release_path, "public/cache")
-#     cmd = " mkdir  #{cache_path}" 
+#     cmd = " mkdir  #{cache_path}"
 #     system cmd
-#    
-#    
+#
+#
 #     public_cache_path = File.join(release_path, "public/cache/www.btzen")
-#     cmd = " mkdir  #{public_cache_path}" 
+#     cmd = " mkdir  #{public_cache_path}"
 #     system cmd
-#    
+#
 #     pro_public_cache_path = File.join(release_path, "public/cache/www.btzen")
-#     cmd = " mkdir  #{pro_public_cache_path}" 
+#     cmd = " mkdir  #{pro_public_cache_path}"
 #     system cmd
-#    
+#
 #    public_500_html = File.join(public_cache_path, "500.html")
 #    execute :curl, "-k", "http://www.btzen/500", "> #{public_500_html}"
-#    
+#
 #    public_404_html = File.join(public_cache_path, "404.html")
 #    execute :curl, "-k", "http://www.btzen/404", "> #{public_404_html}"
-#  
+#
 #    pro_500_html = File.join(pro_public_cache_path, "500.html")
 #    execute :curl, "-k", "http://www.vostfr.pro/500", "> #{pro_500_html}"
-#    
+#
 #    pro_404_html = File.join(pro_public_cache_path, "404.html")
 #    execute :curl, "-k", "http://www.vostfr.pro/404", "> #{pro_404_html}"
 #
-#    
+#
 #  end
 #end
 #after "deploy:published", :generate_500_html
 
-
-  ## rsync to each server
-
+## rsync to each server
 
 # Configuration
 # =============
@@ -209,8 +181,6 @@ end
 # For available Capistrano configuration variables see the documentation page.
 # http://capistranorb.com/documentation/getting-started/configuration/
 # Feel free to add new variables to customise your setup.
-
-
 
 # Custom SSH Options
 # ==================

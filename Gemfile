@@ -151,5 +151,5 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 
-ruby "2.4.0"
+ruby "2.6.5"
 gem 'redis'
