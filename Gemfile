@@ -30,7 +30,7 @@ gem 'jbuilder', '~> 2.7'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1', '>= 3.1.11'
-gem 'nokogiri', '1.8.2'
+gem 'nokogiri', '1.10.4'
 gem 'nio4r', '2.1.0'
 
 #gem "resque", github: "resque/resque", :branch =>'master' , :require => 'resque/server'
@@ -70,7 +70,7 @@ gem 'mail_form', '1.7.1'
 # HTTP caching
 gem 'rack-cache'
 
-gem 'ffi', '1.9.18'
+gem 'ffi', '1.9.24'
 
 # Locale data for Rails. Rails already comes with i18n capabilities (e.g.,
 # translate model attributes, possibility to place all of the app's strings in
