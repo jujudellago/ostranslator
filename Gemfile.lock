@@ -1,4 +1,15 @@
 GIT
+  remote: git://github.com/jujudellago/lit.git
+  revision: e1e53fa67648d4f8b72faa7e9844b0dd9f68a726
+  specs:
+    lit (1.0.6)
+      coffee-rails
+      emoji_flag
+      jquery-rails
+      rails (>= 4.2.0)
+      sass-rails
+
+GIT
   remote: git://github.com/seyhunak/twitter-bootstrap-rails.git
   revision: 8a64089bf4c07c457be40973f1c99923ca8a7ef9
   specs:
@@ -16,16 +27,6 @@ GIT
       capistrano (~> 3.7)
       capistrano-bundler
       puma (~> 4.0)
-
-PATH
-  remote: /Users/juju/Dropbox/Brano-Julien-Stuff/custom-gems/lit
-  specs:
-    lit (1.0.6)
-      coffee-rails
-      emoji_flag
-      jquery-rails
-      rails (>= 4.2.0)
-      sass-rails
 
 GEM
   remote: https://rubygems.org/
