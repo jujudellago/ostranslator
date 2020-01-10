@@ -10,7 +10,7 @@ Lit.authentication_verification = nil
 
 # Either 'redis' or 'hash'. Hash is the fastest, but will fail in multiprocess
 # environment
-Lit.key_value_engine = 'redis'
+Lit.key_value_engine = "redis"
 #Lit.redis_hash={:host => 'localhost', :port => 6379,:db=>0}
 
 # Pass extra options to key_value_neinge, ie. prefix for redis (only one
@@ -36,7 +36,7 @@ Lit.ignore_yaml_on_startup = true
 Lit.api_enabled = false
 
 # API key is required to authorize third party, if API is enabled
-Lit.api_key = 'TnaZ4oAIVk51spg8zRXIon7qTz6lWf/723N4H4g4At0='
+Lit.api_key = "TnaZ4oAIVk51spg8zRXIon7qTz6lWf/723N4H4g4At0="
 
 # If true, last_updated_at column of synchronizaton source will be set to now
 # upon record creation
@@ -47,7 +47,7 @@ Lit.set_last_updated_at_upon_creation = true
 # For more infor please check README.md
 Lit.store_request_info = false
 
+Lit.ignored_keys = %w[actions activerecord admin are_you_sure attributes authorization date datetime devise errors faker filters header hello helpers i18n lit mongoid number order_by ransack routes simple_form support time value_not_yet_translated]
+
 # Initialize lit
 Lit.init
-
-
