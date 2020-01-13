@@ -71,7 +71,7 @@ gem 'mail_form', '1.7.1'
 gem 'rack-cache'
 gem 'bootsnap', require: false
 
-gem 'ffi', '1.9.24'
+gem 'ffi', '1.11.3'
 
 # Locale data for Rails. Rails already comes with i18n capabilities (e.g.,
 # translate model attributes, possibility to place all of the app's strings in
