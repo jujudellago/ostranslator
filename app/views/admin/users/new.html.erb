@@ -36,6 +36,23 @@
   </div>
 
   <div class="form-group">
+    <%= f.label :password, class: "col-sm-2 control-label" %>
+    <div class="col-sm-2">
+      <%= f.password_field :password,
+                           placeholder: password_placeholder,
+                           class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :password_confirmation, class: "col-sm-2 control-label" %>
+    <div class="col-sm-2">
+      <%= f.password_field :password_confirmation,
+                           placeholder: password_placeholder,
+                           class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
       <%= f.submit class: "btn btn-primary" %>
     </div>
