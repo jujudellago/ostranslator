@@ -6,21 +6,20 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-   config.secret_key = '0d87ca7b7d2b194149219142379dc21106bb942927c1a20a191bd39220369bda263eb9a77747eab8d6007aecea4b5b83f4bcd3d3b322cd5b862d3b1b28ec872b'
+  config.secret_key = "0d87ca7b7d2b194149219142379dc21106bb942927c1a20a191bd39220369bda263eb9a77747eab8d6007aecea4b5b83f4bcd3d3b322cd5b862d3b1b28ec872b"
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
-  config.mailer_sender = 'noreply@2pu.net'
+  config.mailer_sender = "noreply@opensubtitles.org"
 
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
 
-  require Rails.root.join('lib/mailers/bt_mailer')
-  config.mailer = 'BtMailer'
-  
-  
+  require Rails.root.join("lib/mailers/bt_mailer")
+  config.mailer = "BtMailer"
+
   # Configure the parent class responsible to send e-mails.
   # config.parent_mailer = 'ActionMailer::Base'
 
@@ -28,7 +27,7 @@ Devise.setup do |config|
   # Load and configure the ORM. Supports :active_record (default) and
   # :mongoid (bson_ext recommended) by default. Other ORMs may be
   # available as additional gems.
-  require 'devise/orm/active_record'
+  require "devise/orm/active_record"
 
   # ==> Configuration for any authentication mechanism
   # Configure which keys are used when authenticating a user. The default is

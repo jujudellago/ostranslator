@@ -3,9 +3,9 @@ Rails.application.configure do
   # config/application.rb.
   config.middleware.use ExceptionNotification::Rack,
                         email: {
-                          email_prefix: '[EXCEPTION] ',
+                          email_prefix: "[EXCEPTION] ",
                           sender_address: %[Opensubtitles" <noreply@opensubtitles.org>],
-                          exception_recipients: %w[julien.ramel@gmail.com]
+                          exception_recipients: %w[julien.ramel@gmail.com],
                         }
 
   # Code is not reloaded between requests.
@@ -18,7 +18,7 @@ Rails.application.configure do
   config.eager_load = true
 
   # Full error reports are disabled and caching is turned on.
-  config.consider_all_requests_local       = false
+  config.consider_all_requests_local = false
   config.action_controller.perform_caching = true
 
   # Attempt to read encrypted secrets from `config/secrets.yml.enc`.
@@ -28,18 +28,18 @@ Rails.application.configure do
 
   # Disable serving static files from the `/public` folder by default since
   # Apache or NGINX already handles this.
-  config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
+  config.public_file_server.enabled = ENV["RAILS_SERVE_STATIC_FILES"].present?
   # The following is required for deployment on Heroku. It obviates the
   # rails_12factor gem which was required in Rails 4. See:
   # https://devcenter.heroku.com/articles/getting-started-with-rails5#heroku-gems
-  if ENV['RAILS_LOG_TO_STDOUT'].present?
-    logger           = ActiveSupport::Logger.new(STDOUT)
+  if ENV["RAILS_LOG_TO_STDOUT"].present?
+    logger = ActiveSupport::Logger.new(STDOUT)
     logger.formatter = config.log_formatter
-    config.logger    = ActiveSupport::TaggedLogging.new(logger)
+    config.logger = ActiveSupport::TaggedLogging.new(logger)
   end
 
   # Compress JavaScripts and CSS.
-#  config.assets.js_compressor = :uglifier
+  #  config.assets.js_compressor = :uglifier
   # config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
@@ -102,43 +102,40 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
-  
-  
+
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
-   # Host for links sent via e-mail by Action Mailer
-  config.action_mailer.default_url_options = { host: 'rex.2pu.net' }
-# config.action_mailer.smtp_settings = {
-#   address: "smtp.gmail.com",
-#   port: 587,
-#   domain: Rails.application.secrets.domain_name,
-#   authentication: "plain",
-#   enable_starttls_auto: true,
-#   user_name: Rails.application.secrets.email_provider_username,
-#   password: Rails.application.secrets.email_provider_password
-# }
- # config.action_mailer.smtp_settings = {
- #   address: "email-smtp.eu-west-1.amazonaws.com",
- #   port: 587,
- #   domain: Rails.application.secrets.domain_name,
- #   authentication: "plain",
- #   enable_starttls_auto: true,
- #   user_name: Rails.application.secrets.email_provider_username,
- #   password: Rails.application.secrets.email_provider_password
- # }
+  # Host for links sent via e-mail by Action Mailer
+  config.action_mailer.default_url_options = { host: "translate.opensubtitles.org" }
+  # config.action_mailer.smtp_settings = {
+  #   address: "smtp.gmail.com",
+  #   port: 587,
+  #   domain: Rails.application.secrets.domain_name,
+  #   authentication: "plain",
+  #   enable_starttls_auto: true,
+  #   user_name: Rails.application.secrets.email_provider_username,
+  #   password: Rails.application.secrets.email_provider_password
+  # }
+  # config.action_mailer.smtp_settings = {
+  #   address: "email-smtp.eu-west-1.amazonaws.com",
+  #   port: 587,
+  #   domain: Rails.application.secrets.domain_name,
+  #   authentication: "plain",
+  #   enable_starttls_auto: true,
+  #   user_name: Rails.application.secrets.email_provider_username,
+  #   password: Rails.application.secrets.email_provider_password
+  # }
 
   config.action_mailer.smtp_settings = {
-      user_name: ENV['SMTP_USER_NAME'],
-      password: ENV['SMTP_PASSWORD'],
-      address: ENV['SMTP_ADDRESS'],
-      domain:  ENV['SMTP_DOMAIN'],
-      port: ENV['SMTP_PORT'],
-      authentication: ENV['SMTP_AUTHENTICATION'],
-      enable_starttls_auto: ENV['SMTP_ENABLE_STARTTLS_AUTO'] 
+    user_name: ENV["SMTP_USER_NAME"],
+    password: ENV["SMTP_PASSWORD"],
+    address: ENV["SMTP_ADDRESS"],
+    domain: ENV["SMTP_DOMAIN"],
+    port: ENV["SMTP_PORT"],
+    authentication: ENV["SMTP_AUTHENTICATION"],
+    enable_starttls_auto: ENV["SMTP_ENABLE_STARTTLS_AUTO"],
   }
 
-  
-  
   # ActionMailer Config
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.raise_delivery_errors = true
