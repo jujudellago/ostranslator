@@ -90,12 +90,13 @@ gem 'exception_notification'
 
 group :test do
   gem 'database_cleaner'
+    gem 'faker'
+
 end
 
 group :development, :test do
   # Detects N+1 queries and unused eager loading
   gem 'bullet'
-  gem 'faker'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger
   # console
   gem 'debug_inspector', '0.0.3'
