@@ -52,10 +52,12 @@ gem 'lit' , :git => 'git://github.com/jujudellago/lit.git'
 gem 'city-state'
 # Authentication
 gem 'devise'
+
+
 gem "figaro"
 # Generate fake user names, e-mails, adresses, IPs, lorem text, etc. Include
 # in all environments as we might use it to seed the DB in test deploys.
-gem 'faker'
+
 # Use slugs instead of IDs in URLs. Makes prettier URLs, improves SEO and avoids
 # leaking DB IDs (for security reasons).
 gem 'friendly_id'
@@ -70,6 +72,7 @@ gem 'mail_form', '1.7.1'
 # HTTP caching
 gem 'rack-cache'
 gem 'bootsnap', require: false
+gem 'newrelic_rpm'
 
 gem 'ffi', '1.9.24'
 
@@ -92,6 +95,7 @@ end
 group :development, :test do
   # Detects N+1 queries and unused eager loading
   gem 'bullet'
+  gem 'faker'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger
   # console
   gem 'debug_inspector', '0.0.3'
