@@ -1,8 +1,8 @@
 GIT
   remote: git://github.com/jujudellago/lit.git
-  revision: 062b585b12978609f3d638f057f195bb439e9bac
+  revision: 3751ec023461add7060b73172fcb24769e6aed15
   specs:
-    lit (1.0.8)
+    lit (1.0.9)
       coffee-rails
       emoji_flag
       jquery-rails
