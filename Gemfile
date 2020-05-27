@@ -30,7 +30,7 @@ gem 'jbuilder', '~> 2.7'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1', '>= 3.1.11'
-gem 'nokogiri', '1.10.4'
+gem 'nokogiri', '1.10.9'
 gem 'nio4r', '2.1.0'
 
 #gem "resque", github: "resque/resque", :branch =>'master' , :require => 'resque/server'
