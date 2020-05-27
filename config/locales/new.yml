@@ -1,5 +1,9 @@
 ---
 fr:
+  devise:
+    passwords:
+      user:
+        invalid_recaptcha: Recaptcha non valide
   ad:
     vpn_heading: Protégez votre traffic Internet !
     your_ip_exposed: "Votre adresse IP est exposée:"
@@ -11,6 +15,8 @@ fr:
     no_thanks: Non, merci.
     ext_heading: Profitez de toutes les fonctionnalités !
     ext_subheading: Installez notre extension
+
+
   flash:
     actions:
       create:
@@ -22,6 +28,7 @@ fr:
         notice: "%{resource_name} a été mis à jour avec succès."
   profile:
     import_from_org: Importer depuis opensubtitles.org
+    change_username: Changer de nom d'utilisateur
   menu:
     download_history: Historique des téléchargements
     latest_movie_subtitles: Derniers sous-titres de films
@@ -101,6 +108,10 @@ nl:
   search:
     ai_translated: Vertaald door kunstmatige intelligentie
 en:
+  devise:
+    passwords:
+      user:
+        invalid_recaptcha: Invalid recaptcha
   global:
     form_select: Select
     extension: Browser extension
@@ -128,6 +139,7 @@ en:
     profile_for_user: Profile for user
     uploads: Uploads
     notifications: Notifications
+    change_username: Change username
   upload:
     upload_subtitles: Upload subtitles
     release_group: Release group
@@ -212,3 +224,17 @@ en:
     ext_signup_button: More infos
     ext_explain_1: Benefit from all VIP features
     ext_explain_2: Enjoy direct downloads, higher download limits, subtitles manipulation and translations
+    extension_install_text: "To access our VIP features, click on</br></br><span style=\"color:#1a73e8\">1. \"<b>Add to Chrome</b>\"</br>2. \"<b>Add Extension</b>\"</span></br></br>By using our extension you benefit from an add-fre experience on our site</br></br><b>Thanks for your support !</b>"
+    extension_ff_text: 'To get UNLIMITED Subtitle Downloads on opensubtitles, click on "<b>+ ADD TO FIREFOX</b>" then on "<b>Add</b>" '
+    free_subtitles_download: Download english subtitles for free
+    add_subplus: "Add %{extension}"
+    step_1: "Step 1"
+    click_accept_and_add: "Click the \"Accept and +Add\" button to download %{extension} Chrome Extension. %{extension} will replace your default search engine by our sponsored search."
+    ext_terms_conditions: 'PLEASE READ THE Terms and Conditions ("TERMS") CAREFULLY BEFORE USING THIS Extension.<br>These sites are owned by third-party sites and are operated by a third party. Therefore %{extension} does not take responsibility and has no control over the performance of these sites, including content, Terms of Use, Privacy and the like. By using this site you acknowledge that %{extension} site will not be liable for any damages, claims or other liability arising from and / or related use of Web sites owned by third parties. These terms of Service ("Terms") and the %{extension} privacy policy (the "privacy policy")'
+    ext_accept_text: 'By clicking the button and adding %{extension} Chrome Extension, I accept and agree to abide by the <a href="%{eula_link}" target="_blank">Terms and Conditions</a> and <a href="%{policy_link}" target="_blank">Privacy Policy</a>.'
+    accept_and_add: 'Accept and +Add'
+    ad_info_1: After installing your will benefit from our VIP features.
+    ad_info_2_chrome: "Step 2 : Click on 'Add to Chrome'"
+    ad_info_2_ff: "Step 2 : Click on 'Add to Firefox'"
+    ad_info_3: "Step 3 : Click on 'Add Extension'"
+    ad_info_4: "Congratulations ! You will now benefit from all the site features !"

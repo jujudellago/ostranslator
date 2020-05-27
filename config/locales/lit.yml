@@ -116,12 +116,58 @@ ar:
         unconfirmed_email: البريد الإلكتروني غير مؤكد
         unlock_token: فتح قفل رمز التوكن
         updated_at: تم التحديث في
+    errors:
+      messages:
+        record_invalid: 'Validation failed: %{errors}'
+        restrict_dependent_destroy:
+          has_many: Cannot delete record because dependent %{record} exist
+          has_one: Cannot delete record because a dependent %{record} exists
+      models:
+        user:
+          attributes:
+            password:
+              weak_password: must be 8 or more characters long, including at least
+                one lowercase letter, one uppercase letter, and one digit.
+      template:
+        header:
+          one: 'Error. Please fix the following item and try again:'
+          other: 'Error. Please fix the following %{count} items and try again:'
     models:
-      user: المستخدم
+      user:
+        one: user
+        other: users
+  ad:
+    advertise_with_us: Advertise your product or brand here   contact %{url} today
+    become_vip: Support us and become VIP member    to remove all ads from %{url}
+    explain_1: Hide your location, protect your privacy
+    explain_2: Stop ISPs and Hackers from Logging Your IP and Everything You Do online
+    ext_button_over: More infos
+    ext_explain_1: Benefit from all VIP features
+  admin:
+    users:
+      index:
+        email: E-mail
+      show:
+        email: E-mail
   banner:
     new_subtitles: ترجمات أفلام جديدة
+  bt_mailer:
+    imported_instructions:
+      action: Set my new password
+      greeting: Hello julien!
+      message: Your email has been imported to our system, you may now define your
+        password.
   comment:
     reply: Reply
+  contact_forms:
+    create:
+      error: An error occurred when trying to send your message.
+      success: Message sent successfully. Thank you for contacting us. Expect our
+        reply soon.
+    new:
+      leave_this_field_blank: Leave this field blank.
+      page_title: Contact
+      send_message: Send message
   date:
     abbr_day_names:
     - الأحد
@@ -286,6 +332,11 @@ ar:
         greeting: مرحباً %{recipient}
         instruction: 'يُمكنك تأكيد بريدك الإلكتروني من خلال الرابط أدناه:'
         subject: تعليمات التأكيد
+      email_changed:
+        greeting: Hello %{recipient}!
+        message: We're contacting you to notify you that your email is being changed
+          to %{email}.
+        subject: Email Changed
       password_change:
         greeting: مرحباً %{recipient}
         message: لقد قمنا بالاتصال بك لإخبارك أنه قد تم تغيير كلمة مرورك.
@@ -458,13 +509,34 @@ ar:
     all: الكل
     close_window: إغلاق النافذة
     comment: تعليق
+    download_subtitles: Download Subtitles
+    downloaded_from: Downloaded from %{value}
+    episode: Episode
+    extension: Browser extension
+    follow_subtitles_rss: Follow subtitles uploads by RSS
     form_select: اختار
+    full_home: Full home page
+    import_osdb_account: Importer votre compte depuis opensubtitles.org
+    import_osdb_account_instructons: Entrez l'email utilisé sur opensubtitles.org,
+      vous recevrez ensuite un lien qui vous permettra de définir votre mot de passe.
+      Si vous disposez d'un status VIP sur opensubtitles.org, celui-ci sera étagalement
+      transféré.
+    import_osdb_account_reset_pass_instructions: Votre compte a été créé avec succès,
+      vous pouvez maintenant définir votre mot de passe.
+    import_osdb_account_successfull: Votre compte a été importé avec succès, veuillez
+      consulter votre boite mail
+    import_osdb_not_found_email: Le compte n'a pas pu être importé, l'email n'a pas
+      été trouvé.
     log_in: دخول
+    movie: Movie
+    new_to_translate: Hello world, you need to be translated
+    new_to_translate_again: Hello world, please translate me
     new_window: الرابط سوف يفتح فى نافذة أخرى
     no_access: تم رفض الدخول; لابد أن تسجل الدخول، أو تشترك فى الموقع
     no_results: لا يوجد نتائج
     not_logged: لم توفر معلومات دخولك!
     post: إرسال
+    rate_1: bad
     search: بحث
     subtitles: ترجمات
     support_us: أدعمنا
@@ -488,6 +560,8 @@ ar:
     newuser_2: من فضلك اضف <b>عنوان بريدك الحالى</b> - حتى تبعث رسالة التفعيل اليه
     profile_1: تأكد من <b>صحة البيانات</b> الموجودة
     profile_2: أختر <b>لغات إضافية</b> إذا اردت البحث فى أكثر من لغة
+    resend_mail_0: Enter your <b>e-mail address</b> and we will send you a <b>confirmation
+      mail</b> of registration
     search_1: لاستخدام خاصية <b>البحث المتعدد</b> يجب عليك تسجيل الدخول
     search_2: للحصول على نتائج افضل استخدم <b>البحث المتقدم</b>
     search_3: للحصول على نتائج البحث بخاصية <b>RSS</b> اضغط على الرابط فى الاسفل
@@ -1113,6 +1187,12 @@ ar:
       هو :   %{url}    إجمالى %{total} ترجمة مطابقة للبحث :    %{search_results}    يمكنك
       إلغاء إشتراكك فى هذة الخدمة عن طريق زيارة الرابط التالي :  %{url_stop}  %{footer}'
     search_results_subj: OpenSubtitles.org search results %{movie_query}
+  tvshow:
+    episode_duration: Episodes duration
+    first_air: First air date
+    seasons: Seasons
+    tvshow_information: TV Show information
+    tvshow_rating: TV Show ratings
   upload:
     add_cd_elements: إضافة ترجمة الجزء التالي
     add_new_movie: Add new movie
@@ -8421,6 +8501,12 @@ de:
         link: Diff  %{model_label}
   banner:
     new_subtitles: Neue Untertitel auf dem Server
+  bt_mailer:
+    imported_instructions:
+      action: Set my new password
+      greeting: Hello julien!
+      message: Your email has been imported to our system, you may now define your
+        password.
   comment:
     reply: antworten
   contact_forms:
@@ -11348,6 +11434,12 @@ en:
     not_authorized: Sorry, you are not authorized to perform this action.
   banner:
     new_subtitles: New subtitles for movies
+  bt_mailer:
+    imported_instructions:
+      action: Set my new password
+      greeting: Hello %{username} !
+      message: Your email has been imported to our system, you may now define your
+        password.
   comment:
     reply: Reply
   contact_forms:
@@ -11721,17 +11813,16 @@ en:
     follow_subtitles_rss: Follow subtitles uploads by RSS
     form_select: Select
     full_home: Full home page
-    import_osdb_account: Importer votre compte depuis opensubtitles.org
-    import_osdb_account_instructons: Entrez l'email utilisé sur opensubtitles.org,
-      vous recevrez ensuite un lien qui vous permettra de définir votre mot de passe.
-      Si vous disposez d'un status VIP sur opensubtitles.org, celui-ci sera étagalement
-      transféré.
-    import_osdb_account_reset_pass_instructions: Votre compte a été créé avec succès,
-      vous pouvez maintenant définir votre mot de passe.
-    import_osdb_account_successfull: Votre compte a été importé avec succès, veuillez
-      consulter votre boite mail
-    import_osdb_not_found_email: Le compte n'a pas pu être importé, l'email n'a pas
-      été trouvé.
+    import_osdb_account: "Import your account from opensubtitles.org\t"
+    import_osdb_account_instructons: "Enter the email used on opensubtitles.org, you
+      will then receive a link that will allow you to set your password. If you have
+      a VIP status on opensubtitles.org, it will also be transferred.\t"
+    import_osdb_account_reset_pass_instructions: Your account has been successfully
+      created, you can now set your password.
+    import_osdb_account_successfull: Your account has been successfully imported,
+      please check your mailbox
+    import_osdb_not_found_email: "The account could not be imported, the email could
+      not be found.\t"
     log_in: log-in
     movie: Movie
     new_to_translate: Hello world, you need to be translated
@@ -19715,6 +19806,10 @@ fr:
         done: Diff
         link: Diff  %{model_label}
     users:
+      index:
+        email: E-mail
+      show:
+        email: E-mail
       success: Succès
   attributes:
     current_password: Mot de passe actuel
@@ -19722,6 +19817,12 @@ fr:
     last_name: Nom
   banner:
     new_subtitles: Nouveaux sous-titres
+  bt_mailer:
+    imported_instructions:
+      action: Définir mon mot de passe
+      greeting: Hello %{username} !
+      message: Votre email a bien été importé. Vous pouvez maintenant définir votre
+        mot de passe.
   comment:
     reply: Répondre
   contact_forms:
